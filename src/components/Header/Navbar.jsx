@@ -10,8 +10,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const navItems = [
   { label: "Home", href: "/" },
-  // { label: "Fashion", href: "/fashion-coupon" },
-  { label: "Fashion", href: "#" },
+  { label: "Fashion", href: "/fashion-coupon" },
+  // { label: "Fashion", href: "#" },
 
   // { label: "Electronics", href: "electronic-coupon" },
   { label: "Electronics", href: "#" },
