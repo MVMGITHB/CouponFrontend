@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MVM Business Services",
+  title: "Coupons Culture",
 };
 export default function RootLayout({ children }) {
   return (
