@@ -13,12 +13,12 @@ const navItems = [
   { label: "Fashion", href: "/fashion-coupon" },
   // { label: "Fashion", href: "#" },
 
-  // { label: "Electronics", href: "electronic-coupon" },
-  { label: "Electronics", href: "#" },
-  // { label: "Food", href: "food-coupon"  },
-  { label: "Food", href: "#"  },
-  // { label: "Travel", href: "travel-coupon" },
-  { label: "Travel", href: "#" },
+  { label: "Electronics", href: "electronic-coupon" },
+  // { label: "Electronics", href: "#" },
+  { label: "Food", href: "food-coupon"  },
+  // { label: "Food", href: "#"  },
+  { label: "Travel", href: "travel-coupon" },
+  // { label: "Travel", href: "#" },
 ];
 
 function Header() {
@@ -76,7 +76,7 @@ function Header() {
 
         <div className="flex items-center gap-4">
           {/* Desktop Auth */}
-          {/* <div className="hidden md:flex items-center gap-3">
+           <div className="hidden md:flex items-center gap-3">
             {auth.user ? (
               <>
                 <Avatar className="w-9 h-9 ring-2 ring-white">
@@ -109,7 +109,7 @@ function Header() {
                 </Link>
               </>
             )}
-          </div> */}
+          </div> 
 
           {/* Mobile menu toggle */}
           <button

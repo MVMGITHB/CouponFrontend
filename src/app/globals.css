@@ -123,3 +123,12 @@ body {
   }
 }
 
+
+.croselimage{
+  display: flex !important;
+}
+
+.slick-initialized .slick-slide{
+  display: flex !important;
+  justify-content: center !important;
+}

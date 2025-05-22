@@ -71,7 +71,7 @@ export default function Offers() {
     <div className="py-12 bg-blue-100">
       <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-10">🔥 Best Offers</h1>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1400px] mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
           {offers.slice(0,5).map((offer, index) => (
             <div

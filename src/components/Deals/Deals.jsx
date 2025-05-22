@@ -63,7 +63,7 @@ export default function Deals() {
         🎉 Deals on Fire
       </h1>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1400px] mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
           {deals.slice(4).map((deal, index) => (
             <div
