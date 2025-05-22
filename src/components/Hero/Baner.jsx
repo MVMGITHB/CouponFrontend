@@ -71,8 +71,8 @@ const Baner = () => {
 
     return (
         <div className="relative flex justify-center py-4">
-            <div className="w-[100%] mx-auto px-6 relative ">
-
+            <div className="container1">
+             {/* w-[100%] mx-auto px-6 relative  */}
                 {/* Carousel Controls */}
                 <button
                     className="cursor-pointer absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
