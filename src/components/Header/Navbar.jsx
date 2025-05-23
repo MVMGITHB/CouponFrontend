@@ -31,17 +31,17 @@ function Header() {
   };
 
   return (
-    <header className="bg-[#1c1c1c] text-white shadow-md">
+    <header className="bg-white text-black shadow-md sticky top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left section: Logo */}
         <Link href="/">
-          {/* <img
-            src="https://www.couponzguru.com/wp-content/themes/cguru-v2/img/logo.svg"
+          <img
+            src="/images/logo3.png"
             alt="logo"
-            className="h-10 md:h-12 w-auto"
-          /> */}
+            className="h-[40px] md:h-[60px] w-auto"
+          />
 
-          CouponCulture
+          {/* CouponCulture */}
         </Link>
 
         {/* Desktop Nav */}
@@ -114,7 +114,7 @@ function Header() {
           {/* Mobile menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-2xl text-white"
+            className="md:hidden text-2xl text-black"
           >
             {menuOpen ? <MdClose /> : <MdMenu />}
           </button>

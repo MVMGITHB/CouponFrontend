@@ -158,3 +158,13 @@ body {
   padding-right: 24px;
 }
 }
+
+
+.gettouch-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.gettouch-hide-scrollbar {
+  -ms-overflow-style: none ;  /* IE and Edge */
+  scrollbar-width: none ;     /* Firefox */
+}

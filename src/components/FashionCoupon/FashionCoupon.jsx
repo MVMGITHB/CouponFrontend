@@ -6,12 +6,16 @@ import { OffersSecond } from "./OffersSecond";
 export default function FashionCoupon() {
   return (
     <div className="bg-black ">
-      <Fashion />
-      <div className="flex flex-col lg:flex-row lg:ml-4 items-center lg:items-start gap-6">
+
+      <div className="max-w-[1400px] mx-auto px-[10px]">
+        <Fashion />
+      <div className="flex flex-col md:flex-row lg:flex-row mx-auto lg:items-start gap-6">
         <OfferSection />
         <Offers /> 
         <OffersSecond />
       </div>
+      </div>
+      
     </div>
   );
 }

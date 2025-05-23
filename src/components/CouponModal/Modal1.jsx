@@ -1,19 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Modal({ isOpen, onClose, offer }) {
+export default function Modal1({ isOpen, onClose, offer }) {
     if (!isOpen) return null;
     
     const {title , website , code , description , logo} = offer
   
     return (
-      <div className="fixed inset-0 bg-black/30 flex justify-center items-center z-[999] px-4">
-        <div className="bg-white rounded-2xl p-6 w-[90%] md:w-[70%] lg:w-[50%] relative shadow-2xl">
+      <div className="fixed inset-0 bg-black/30 flex justify-center items-center  z-[999] px-4">
+        <div className="bg-white rounded-2xl p-6 w-[90%] md:w-[70%] lg:w-[40%] relative shadow-2xl">
           <button
             className="absolute cursor-pointer top-2 right-2 text-gray-600 hover:text-black text-2xl"
             onClick={onClose}
           >
-            &times;
+            &times; 
           </button>
   
           <h2 className="text-2xl font-bold mb-4 text-center">
@@ -24,7 +24,7 @@ export default function Modal({ isOpen, onClose, offer }) {
   
           <div className="flex justify-center items-center mt-2 gap-2">
             <div className="border-2 border-[#0d65a0] bg-[#DCEEFF] rounded-b-md">
-              <h4 className="text-2xl text-[#0d65a0] px-4 py-1">{code}</h4>
+              <h4 className="text-2xl text-[#0d65a0] px-4 py-1 lg:w-[350px] text-center">{code}</h4>
             </div>
             <p
               onClick={() => navigator.clipboard.writeText("CG23R13")}
@@ -48,8 +48,11 @@ export default function Modal({ isOpen, onClose, offer }) {
              height={64}
              className="object-contain mb-4"
            />
-            <p className="px-4 text-justify">
-            {description}            </p>
+             <ul className="gettouchcoupon-points list-disc ml-5 text-sm text-gray-700 space-y-1">
+          {description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
           </div>
         </div>
       </div>

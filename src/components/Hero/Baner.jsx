@@ -8,24 +8,24 @@ import { useRef, useState } from "react";
 
 const jobs = [
     {
-        image1: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/f3c0efd7d1d18e69c3900b81410a49e3/banner_home-580x1160.webp?619392",
-        image2: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/eb710c1a6f333f59a37bc55a08e461c3/banner_home-580x1160.webp?507035"
+        image1: "/images/banner1.jpg",
+        
     },
 
     {
-        image1: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/dcc082865e7ed689b116fa92f4dcc7fa/banner_home-580x1160.webp?273272",
-        image2: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/f3c0efd7d1d18e69c3900b81410a49e3/banner_home-580x1160.webp?619392"
+        image1: "/images/banner2.jpg",
+        
     },
 
     {
-        image1: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/eb710c1a6f333f59a37bc55a08e461c3/banner_home-580x1160.webp?507035",
-        image2: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/f3c0efd7d1d18e69c3900b81410a49e3/banner_home-580x1160.webp?619392"
+       image1: "/images/banner3.jpg",
+
     },
 
     {
-        image1: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/f3c0efd7d1d18e69c3900b81410a49e3/banner_home-580x1160.webp?619392",
-        image2: "https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/f3c0efd7d1d18e69c3900b81410a49e3/banner_home-580x1160.webp?619392"
-    }
+        image1: "/images/banner2.jpg",
+        
+    },
 ]
 
 const Baner = () => {
