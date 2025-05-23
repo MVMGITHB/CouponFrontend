@@ -76,7 +76,7 @@ export const Offers = () => {
 
 
   return (
-    <div className="flex flex-col gap-[30px] pt-[15px] h-[740px] gettouch-hide-scrollbar overflow-y-auto ">
+    <div className="flex flex-col gap-[30px] pt-[15px] h-auto md:h-[740px] gettouch-hide-scrollbar overflow-y-auto ">
 
       {/* {offers.map((_, idx) => (
         <div key={idx} className="w-full lg:w-[53rem] h-40 bg-red-200 rounded-lg shadow-md p-4 m-4 flex justify-center items-center">

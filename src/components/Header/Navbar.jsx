@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Link from "next/link";
 import { MdSearch, MdMenu, MdClose } from "react-icons/md";
 import { useAuth } from "@/components/context/auth";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+
+
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -30,6 +34,14 @@ function Header() {
     localStorage.removeItem("auth");
   };
 
+
+  const pathname = usePathname();
+
+useEffect(() => {
+  setMenuOpen(false);
+}, [pathname]);
+
+
   return (
     <header className="bg-white text-black shadow-md sticky top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -43,6 +55,22 @@ function Header() {
 
           {/* CouponCulture */}
         </Link>
+
+
+        {/* Mobile Search */}
+          <div className="w-[200px] flex items-center mt-2 rounded-md bg-[#3b404b] px-1 py-1 border border-[#505866]  md:hidden">
+            <Input
+              type="text"
+              placeholder="Search Products"
+              className="border-none bg-transparent text-white placeholder:text-gray-400 focus-visible:ring-0 focus-visible:outline-none"
+            />
+            <Button
+              size="icon"
+              className="rounded-md bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white"
+            >
+              <MdSearch className="text-xl" />
+            </Button>
+          </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
@@ -160,22 +188,43 @@ function Header() {
               </>
             ) : (
               <>
-                <Link href="/login">
-                  <Button className="w-full bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white">
+
+              <div className="flex flex-col gap-6">
+                {/* <Link href="/login">
+                  <Button className="w-[50%] bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white">
                     Login
                   </Button>
-                </Link>
-                <Link href="/register">
-                  <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
+                </Link> */}
+
+
+                 <Link
+               
+                href="/login"
+                className="text-white hover:text-yellow-400 transition"
+              >
+                 Login
+              </Link>
+                {/* <Link href="/register">
+                  <Button className="w-[50%] bg-yellow-500 hover:bg-yellow-600 text-white">
                     Sign up
                   </Button>
-                </Link>
+                </Link> */}
+
+
+                 <Link
+                href="/register"
+                className="text-white hover:text-yellow-400 transition"
+              >
+                Sign up
+              </Link>
+              </div>
+                
               </>
             )}
           </div>
 
           {/* Mobile Search */}
-          <div className="flex items-center mt-4 rounded-md bg-[#3b404b] px-2 py-1 border border-[#505866]">
+          {/* <div className="flex items-center mt-4 rounded-md bg-[#3b404b] px-2 py-1 border border-[#505866]">
             <Input
               type="text"
               placeholder="Search Products"
@@ -187,7 +236,7 @@ function Header() {
             >
               <MdSearch className="text-xl" />
             </Button>
-          </div>
+          </div> */}
         </div>
       )}
     </header>
