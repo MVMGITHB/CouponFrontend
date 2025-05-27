@@ -16,7 +16,7 @@ export const Reedem = () => {
       const decoded = JSON.parse(decodeURIComponent(atob(data)));
       return decoded;
     } catch (error) {
-      console.error('Invalid offer data:', error);
+      // console.error('Invalid offer data:', error);
       return null;
     }
   }, [searchParams]);
