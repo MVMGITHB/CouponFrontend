@@ -55,7 +55,7 @@ const Baner = () => {
             {
                 breakpoint: 768,      // Small tablets and phones
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 },
             },
             {
@@ -75,13 +75,13 @@ const Baner = () => {
              {/* w-[100%] mx-auto px-6 relative  */}
                 {/* Carousel Controls */}
                 <button
-                    className="cursor-pointer absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
+                    className=" hidden md:block cursor-pointer absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
                     onClick={() => sliderRef.current?.slickPrev()}
                 >
                     <FaChevronLeft size={10} />
                 </button>
                 <button
-                    className="cursor-pointer absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
+                    className=" hidden md:block cursor-pointer absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
                     onClick={() => sliderRef.current?.slickNext()}
                 >
                     <FaChevronRight size={10} />

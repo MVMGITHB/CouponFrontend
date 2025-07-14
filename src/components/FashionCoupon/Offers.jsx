@@ -1,12 +1,31 @@
 
+
+'use client'
+import { useState,useEffect } from "react";
 import CouponCard from "./CouponCard";
+import axios from 'axios'
+import base_url from '../helper/baseurl'
 
 
 
-export const Offers = () => {
-  const offers = [1, 2, 3]; // loop for brevity
+export const Offers = ({slug}) => {
+  
 
-
+   const [offers, setOffers] = useState([]);
+  
+    const fetchOffers = async () => {
+      try {
+        const response = await axios.get(base_url + `/api/coupon/getCouponByCategorySlug/${slug}`);
+        console.log("---data---", response.data.data)
+        setOffers(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    useEffect(() => {
+      fetchOffers()
+    }, [])
 
  
 
@@ -112,8 +131,8 @@ export const Offers = () => {
         </div>
       ))} */}
 
-     {couponData.map((coupon, index) => (
-        <CouponCard key={index} {...coupon} />
+     {offers.map((coupon, index) => (
+        <CouponCard key={index}  coupon={coupon} />
       ))}
       
     </div>

@@ -168,3 +168,10 @@ body {
   -ms-overflow-style: none ;  /* IE and Edge */
   scrollbar-width: none ;     /* Firefox */
 }
+
+
+.aboutus {
+  background-image: url("/images/about.jpg"); /* ✅ correct */
+  background-size: cover;
+  background-position: center;
+}

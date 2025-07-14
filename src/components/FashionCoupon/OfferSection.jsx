@@ -98,7 +98,7 @@ const data = [
           />
           
 
-          <div className="grid grid-rows-3 w-full sm:w-48 gap-4 py-4 mx-auto ">
+          <div className="grid grid-rows-3 w-full md:w-48 gap-4 py-4 mx-auto ">
     {
       data?.map((item,index)=>{
          return (<>
@@ -110,15 +110,7 @@ const data = [
         className="w-full h-auto object-cover rounded"
       />
       <h1 className="text-white font-semibold text-base mt-2">{item?.offer}</h1>
-      {/* <a
-        href={item?.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium text-[13px] px-4 py-2 rounded self-center"
-      >
-        GET THIS COUPON
-      </a> */}
-
+   
 
       <button  onClick={() => handleOpenModal({data})} className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium text-[13px] px-4 py-2 rounded self-center"> GET THIS COUPON</button>
     </div>

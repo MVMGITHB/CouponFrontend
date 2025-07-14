@@ -1,37 +1,52 @@
 "use client";
+import { useState } from "react";
+import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
-  // const footerNavs = [
-  //   // {
-  //   //   label: "Quick Links",
-  //   //   items: [
-  //   //     { href: "#", name: "Home" },
-  //   //     { href: "#", name: "News" },
-  //   //     { href: "#", name: "Viral Stories" },
-  //   //     { href: "#", name: "Match Score" },
-  //   //   ],
-  //   // },
-  //   {
-  //     label: "Company",
-  //     items: [
-  //       { href: "#", name: "About Us" },
-  //       { href: "#", name: "Careers" },
-  //       { href: "#", name: "Contact" },
-  //       { href: "#", name: "Privacy Policy" },
-  //     ],
-  //   },
-  //   {
-  //     label: "Resources",
-  //     items: [
-  //       { href: "#", name: "Terms of Service" },
-  //       { href: "#", name: "FAQs" },
-  //       { href: "#", name: "Support" },
-  //       { href: "#", name: "Advertising" },
-  //     ],
-  //   },
-  // ];
-  const footerNavs = [];
+
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleSection = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+
+
+  const footerNavs = [
+    // {
+    //   label: "Quick Links",
+    //   items: [
+    //     { href: "#", name: "Home" },
+    //     { href: "#", name: "News" },
+    //     { href: "#", name: "Viral Stories" },
+    //     { href: "#", name: "Match Score" },
+    //   ],
+    // },
+    {
+      label: "Company",
+      items: [
+        { href: "/fashion-coupon", name: "Fashion Coupon" },
+         { href: "/electronic-coupon", name: "Electronic Coupon" },
+        { href: "/food-coupon", name: "Food Coupon" },
+        { href: "/travel-coupon", name: "Travel Coupon" },
+      ],
+    },
+
+
+    {
+      label: "Resources",
+      items: [
+         { href: "/about-us", name: "About Us" },
+         { href: "/terms-conditions", name: "Terms And Codition" },
+        { href: "/privacy-policy", name: "Privacy Policy" },
+      ],
+    },
+
+   
+  ];
+
   return (
     <footer className="bg-[#1d1d1d] text-gray-300 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-screen-xl mx-auto">
@@ -64,7 +79,7 @@ const Footer = () => {
         </div>
 
         {/* Middle: Links */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 text-center sm:text-left">
+        <div className=" hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 text-center sm:text-left">
           {footerNavs.map((nav, idx) => (
             <div key={idx}>
               <h4 className="text-white text-base font-semibold mb-3">
@@ -73,47 +88,96 @@ const Footer = () => {
               <ul className="space-y-1 text-sm">
                 {nav.items.map((item, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={item.href}
                       className="hover:text-yellow-400 transition-colors"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-        </div> */}
+        </div>
+
+
+        
+        
+ <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  mt-3 sm:text-left md:hidden">
+      {footerNavs.map((nav, idx) => {
+        const isOpen = openIndex === idx;
+
+        return (
+          <div key={idx}>
+            <div
+              className="flex items-center justify-between sm:block cursor-pointer"
+              onClick={() => toggleSection(idx)}
+            >
+              <h4 className="text-white text-base font-semibold mb-3">
+                {nav.label}
+              </h4>
+             
+
+              {/* Arrow icon (mobile only) */}
+              <span
+                className={`sm:hidden text-white text-lg transform transition-transform ${
+                  isOpen ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                ▼
+              </span>
+            </div>
+           
+            <ul
+              className={`space-y-1 text-sm transition-all duration-300 ${
+                isOpen ? "block" : "hidden"
+              } sm:block`}
+            >
+              {nav.items.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-yellow-400 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
 
         {/* Bottom: Social & Legal */}
         <div className="mt-10 pt-4 border-t border-[#333] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p>© 2025 Coupans Culture. All rights reserved.</p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-end">
-            <a
+            <Link
               href="#"
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
               <FaFacebook size={16} /> Facebook
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
               <FaTwitter size={16} /> Twitter
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
               <FaGithub size={16} /> GitHub
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
               <FaInstagram size={16} /> Instagram
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -2,36 +2,32 @@
 
 import React, { useState } from "react";
 import Modal1 from '../CouponModal/Modal1'
+import base_url from "../helper/baseurl";
+import Link from "next/link";
 
-const CouponCard = ({ heading, data, image, websiteLink }) => {
+const CouponCard = ({ coupon}) => {
   const [expanded, setExpanded] = useState(false);
    const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedOffer, setSelectedOffer] = useState("");
 
-  const visibleData = expanded ? data : data.slice(0, 2);
+  const visibleData = expanded ? coupon?.description1 : coupon?.description1.slice(0, 2);
 
 
 //   title , website , code , description , logo
    const handleOpenModal = (offer) => {
-
+ 
 
     const test = {
-      code:"GSTIN",
-      website:"https://top5shots.com/"
+      code:coupon?.code,
+      website:coupon?.website
    }
 
    const test1 = {
-    title:"Exclusive Coupon – Upto 50% OFF + Extra 25% OFF On Jewellery",
-    code:"GSTIN",
-      website:"https://top5shots.com/",
-      description:[
-      "Book Round-Trip Domestic Flights And Save Upto 35%.",
-      "Valid From Friday To Sunday Every Week.",
-      "Maximum Discount Of Rs.6,000 Per Booking.",
-      "Offer Valid For All Users.",
-      "No Code Needed – Auto Applied At Checkout."
-    ],
-       logo:"/images/ixigo-coupon-codes.jpg"
+    title:coupon?.title,
+    code:coupon?.code,
+      website:coupon?.website,
+      description:coupon?.description1,
+       logo:`${base_url}${coupon?.logo}`
    }
     setSelectedOffer(test1);
     setIsModalOpen(true);
@@ -71,8 +67,6 @@ const CouponCard = ({ heading, data, image, websiteLink }) => {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         offer={selectedOffer}
-
-        
       />
 
 
@@ -86,7 +80,7 @@ const CouponCard = ({ heading, data, image, websiteLink }) => {
 
       {/* Image */}
       <img
-        src={image}
+        src={`${base_url}${coupon?.logo}`}
         alt="Coupon"
         className="gettouchcoupon-img w-20 h-20 object-contain"
       />
@@ -94,7 +88,7 @@ const CouponCard = ({ heading, data, image, websiteLink }) => {
       {/* Text Content */}
       <div className="gettouchcoupon-content flex-1">
         <h2 className="gettouchcoupon-heading font-semibold text-lg text-gray-800 mb-2">
-          {heading}
+          {coupon?.title}
         </h2>
 
         <ul className="gettouchcoupon-points list-disc ml-5 text-sm text-gray-700 space-y-1">
@@ -104,7 +98,7 @@ const CouponCard = ({ heading, data, image, websiteLink }) => {
         </ul>
 
         {/* Show More Button */}
-        {data.length > 2 && (
+        {coupon?.description1?.length > 2 && (
           <button
             className="gettouchcoupon-readmore text-blue-600 text-sm mt-2"
             onClick={() => setExpanded(!expanded)}
@@ -128,7 +122,15 @@ const CouponCard = ({ heading, data, image, websiteLink }) => {
         GET THIS COUPON
       </a> */}
 
-      <button  onClick={() => handleOpenModal({image})} className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 rounded self-center"> GET THIS COUPON</button>
+      {
+        coupon?.code?( <button  onClick={() => handleOpenModal({coupon})} className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 rounded self-center"> GET OFFER</button>):(
+          <>
+           <button  className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 rounded self-center"> <Link href={`${coupon?.website}`}>GET OFFER</Link></button>
+          </>
+        )
+      }
+
+     
 
 
      

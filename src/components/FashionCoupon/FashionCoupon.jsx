@@ -3,15 +3,15 @@ import { OfferSection } from "./OfferSection";
 import { Offers } from "./Offers";
 import { OffersSecond } from "./OffersSecond";
 
-export default function FashionCoupon() {
+export default function FashionCoupon({slug,images}) {
   return (
     <div className="bg-black ">
 
       <div className="max-w-[1400px] mx-auto px-[10px]">
-        <Fashion />
+        <Fashion images={images} />
       <div className="flex flex-col md:flex-row lg:flex-row mx-auto lg:items-start gap-6">
         <OfferSection />
-        <Offers /> 
+        <Offers slug={slug}/> 
         <OffersSecond />
       </div>
       </div>

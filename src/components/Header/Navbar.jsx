@@ -10,6 +10,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
+import SearchMobile from './SearchMobile '
+
+import CouponSearch from './CouponSearch'
 
 
 const navItems = [
@@ -58,7 +61,7 @@ useEffect(() => {
 
 
         {/* Mobile Search */}
-          <div className="w-[200px] flex items-center mt-2 rounded-md bg-[#3b404b] px-1 py-1 border border-[#505866]  md:hidden">
+          {/* <div className="w-[200px] flex items-center mt-2 rounded-md bg-[#3b404b] px-1 py-1 border border-[#505866]  md:hidden">
             <Input
               type="text"
               placeholder="Search Products"
@@ -70,7 +73,9 @@ useEffect(() => {
             >
               <MdSearch className="text-xl" />
             </Button>
-          </div>
+          </div> */}
+
+          <SearchMobile/>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
@@ -100,6 +105,10 @@ useEffect(() => {
           </Button>
         </div> */}
 
+        <CouponSearch/>
+
+        
+
         {/* Right section: Auth & Hamburger */}
 
         <div className="flex items-center gap-4">
@@ -118,7 +127,7 @@ useEffect(() => {
                 </span>
                 <Button
                   onClick={handleLogout}
-                  className="bg-red-500 hover:bg-red-600 text-white"
+                  className=" cursor-pointer bg-red-500 hover:bg-red-600 text-white"
                 >
                   Logout
                 </Button>
@@ -126,12 +135,12 @@ useEffect(() => {
             ) : (
               <>
                 <Link href="/login">
-                  <Button className="bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white">
+                  <Button className=" cursor-pointer bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white">
                     Login
                   </Button>
                 </Link>
                 <Link href="/register">
-                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
+                  <Button className="cursor-pointer bg-yellow-500 hover:bg-yellow-600 text-white">
                     Sign up
                   </Button>
                 </Link>
@@ -181,7 +190,7 @@ useEffect(() => {
                 </div>
                 <Button
                   onClick={handleLogout}
-                  className="w-full bg-red-500 hover:bg-red-600 text-white"
+                  className=" cursor-pointer w-full bg-red-500 hover:bg-red-600 text-white"
                 >
                   Logout
                 </Button>
@@ -200,7 +209,7 @@ useEffect(() => {
                  <Link
                
                 href="/login"
-                className="text-white hover:text-yellow-400 transition"
+                className="cursor-pointer text-white hover:text-yellow-400 transition"
               >
                  Login
               </Link>
@@ -213,7 +222,7 @@ useEffect(() => {
 
                  <Link
                 href="/register"
-                className="text-white hover:text-yellow-400 transition"
+                className=" cursor-pointer text-white hover:text-yellow-400 transition"
               >
                 Sign up
               </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CouponBox from './CouponBox'
 
 export default function Modal1({ isOpen, onClose, offer }) {
     if (!isOpen) return null;
@@ -22,7 +23,7 @@ export default function Modal1({ isOpen, onClose, offer }) {
           <hr className="bg-gray-700 mb-2" />
           <p className="text-center text-xl">Copy Code And Choose At Checkout</p>
   
-          <div className="flex justify-center items-center mt-2 gap-2">
+          {/* <div className="flex justify-center items-center mt-2 gap-2">
             <div className="border-2 border-[#0d65a0] bg-[#DCEEFF] rounded-b-md">
               <h4 className="text-2xl text-[#0d65a0] px-4 py-1 lg:w-[350px] text-center">{code}</h4>
             </div>
@@ -32,7 +33,9 @@ export default function Modal1({ isOpen, onClose, offer }) {
             >
               Copy code
             </p>
-          </div>
+          </div> */}
+
+          <CouponBox code={code}/>
   
           <div className="mt-4 text-center">
            <Link href={website}> <button className="px-6 py-2 bg-red-600 text-white rounded-xl cursor-pointer hover:bg-red-700 transition">
@@ -49,10 +52,11 @@ export default function Modal1({ isOpen, onClose, offer }) {
              className="object-contain mb-4"
            />
              <ul className="gettouchcoupon-points list-disc ml-5 text-sm text-gray-700 space-y-1">
-          {description.map((item, index) => (
+          {description?.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
+        
           </div>
         </div>
       </div>

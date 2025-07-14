@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
 
     // output: "export",
   images: {
-    domains: ["cdn.couponzguru.com"],
+    domains: ["cdn.couponzguru.com","api.couponsculture.com",],
+    
   },
 };
 

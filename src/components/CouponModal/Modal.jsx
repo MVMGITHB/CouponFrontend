@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import base_url from "../helper/baseurl";
+import CouponBox from './CouponBox'
 
 export default function Modal({ isOpen, onClose, offer }) {
     if (!isOpen) return null;
     
-    const {title , website , code , description , logo} = offer
+    const {title , website , code , description1 , logo} = offer
   
     return (
       <div className="fixed inset-0 bg-black/30 flex justify-center items-center z-[999] px-4">
@@ -22,7 +24,7 @@ export default function Modal({ isOpen, onClose, offer }) {
           <hr className="bg-gray-700 mb-2" />
           <p className="text-center text-xl">Copy Code And Choose At Checkout</p>
   
-          <div className="flex justify-center items-center mt-2 gap-2">
+          {/* <div className="flex justify-center items-center mt-2 gap-2">
             <div className="border-2 border-[#0d65a0] bg-[#DCEEFF] rounded-b-md">
               <h4 className="text-2xl text-[#0d65a0] px-4 py-1">{code}</h4>
             </div>
@@ -32,7 +34,9 @@ export default function Modal({ isOpen, onClose, offer }) {
             >
               Copy code
             </p>
-          </div>
+          </div> */}
+
+          <CouponBox code={code}/>
   
           <div className="mt-4 text-center">
            <Link href={website}> <button className="px-6 py-2 bg-red-600 text-white rounded-xl cursor-pointer hover:bg-red-700 transition">
@@ -42,15 +46,22 @@ export default function Modal({ isOpen, onClose, offer }) {
   
           <div className="bg-[rgb(236 240 241 / .5)]-100 flex flex-col md:flex-row justify-center items-center mt-4 gap-4 py-4 px-2 max-w-full rounded-md">
                        <Image
-             src={logo}
+             src={`${base_url}${logo}`}
              
              width={128}
              height={64}
              className="object-contain mb-4"
            />
-            <p className="px-4 text-justify">
-            {description}            </p>
+             <ul className="gettouchcoupon-points list-disc ml-5 text-sm text-gray-700 space-y-1">
+          {description1.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        
           </div>
+
+
+
         </div>
       </div>
     );

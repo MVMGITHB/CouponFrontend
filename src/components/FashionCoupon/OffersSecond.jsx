@@ -104,7 +104,7 @@ export const OffersSecond = () => {
             
           />
           
-           <div className="grid grid-rows-3 w-full sm:w-48 gap-4 py-4 mx-auto ">
+           <div className="grid grid-rows-3 w-full md:w-48 gap-4 py-4 mx-auto ">
     {
       data?.map((item,index)=>{
          return (<>
