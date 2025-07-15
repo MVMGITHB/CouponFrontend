@@ -110,35 +110,42 @@ export default function Offers() {
     <div className="py-5 md:py-12 bg-blue-100">
       <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-5 md:mb-16">🔥 Best Offers</h1>
 
-      <div className="max-w-[1400px] mx-auto px-12 md:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 justify-center items-center">
-          {offers.slice(0, 5).reverse().map((offer, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"
-            >
+    <div className="max-w-[1400px] mx-auto px-12 md:px-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
+    {offers.slice(0, 10).map((deal, index) => (
+      <div
+        key={index}
+        className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 h-[340px] w-full"
+      >
+        {/* Fixed-height image container */}
+        <div className="w-full h-[80px] flex items-center justify-center mb-4">
+          <Image
+            src={`${base_url}${deal?.logo}`}
+            alt={`Offer ${index + 1}`}
+            width={128}
+            height={64}
+            className="object-contain max-h-full"
+          />
+        </div>
 
-              {
-                offer?.logo ? (<Image
-                  src={`${base_url}${offer?.logo}`}
-                  alt={`Offer ${index + 1}`}
-                  width={128}
-                  height={64}
-                  className="object-contain mb-4"
-                />) : ("")
-              }
+        {/* Title with line clamp */}
+        <p className="text-gray-700 text-[1.1rem] line-clamp-2 mb-4 h-[52px]">
+          {deal.title}
+        </p>
 
-              <p className="text-gray-700 mb-6 text-[1.2rem] line-clamp-3">{offer?.title}</p>
-              <button
-                onClick={() => handleOpenModal(offer)}
-                className="cursor-pointer mt-auto px-5 py-2 bg-black text-white rounded-xl hover:bg-gray-800 transition"
-              >
-                Get Coupon
-              </button>
-            </div>
-          ))}
+        {/* Push button to bottom */}
+        <div className="mt-auto">
+          <button
+            className="px-5 py-2 bg-black cursor-pointer text-white rounded-xl hover:bg-gray-800 transition"
+            onClick={() => handleOpenModal(deal)}
+          >
+            Get Coupon
+          </button>
         </div>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Modal */}
       {/* <Modal isOpen={isModalOpen} onClose={handleCloseModal} offer={selectedOffer} /> */}
