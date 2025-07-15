@@ -5,27 +5,41 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 const jobs = [
     {
+        image1: "/images/MyntraBanner.png",
+        link:"https://trackback.gotrackier.com/click?campaign_id=32267&pub_id=771&p1=%7Byour-transaction-id%7D&source=%7Byour-sub-aff-id%7D"
+    },
+
+    {
+        image1: "/images/filpkart banner.png",
+        link:"http://fkrt.it/OQCAAqNNNN"
+        
+    },
+    {
+        image1: "/images/ajiobanner.png",
+        link:"https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=couponsculture%20&redirect=https://www.ajio.com/s/50to90percentoff-133938"
+    },
+    {
         image1: "/images/banner1.jpg",
+        link:"https://trackback.gotrackier.com/click?campaign_id=32329&pub_id=771&p1=%7Byour-transaction-id%7D&source=%7Byour-sub-aff-id%7D"
         
     },
 
     {
         image1: "/images/banner2.jpg",
-        
+                link:"https://www.myntra.com/"
+
     },
 
     {
        image1: "/images/banner3.jpg",
+        link:"https://www.myntra.com/"
 
     },
 
-    {
-        image1: "/images/banner2.jpg",
-        
-    },
 ]
 
 const Baner = () => {
@@ -90,11 +104,14 @@ const Baner = () => {
                     <Slider ref={sliderRef} {...settings}>
                         {jobs.map((job, index) => (
                             <div key={index} className="px-2">
+                              <Link href={job?.link} target="_blank">
                                 <img
                                     src={job?.image1}
+
                                     alt="tag"
                                     className=" w-[400px]   lg:w-full  object-contain rounded-sm"
                                 />
+                              </Link>
                             </div>
                         ))}
                     </Slider>

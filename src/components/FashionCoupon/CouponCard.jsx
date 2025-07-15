@@ -126,6 +126,7 @@ const CouponCard = ({ coupon }) => {
   <button
     onClick={() => {
       setIsActivated(true);
+      handleOpenModal({ coupon })
       window.open(coupon?.website, "_blank");
     }}
     className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 rounded self-center"
