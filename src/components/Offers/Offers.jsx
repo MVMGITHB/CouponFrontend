@@ -112,7 +112,7 @@ export default function Offers() {
 
       <div className="max-w-[1400px] mx-auto px-12 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 justify-center items-center">
-          {offers.slice(0, 5).map((offer, index) => (
+          {offers.slice(0, 5).reverse().map((offer, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"

@@ -16,8 +16,9 @@ export const Offers = ({slug}) => {
     const fetchOffers = async () => {
       try {
         const response = await axios.get(base_url + `/api/coupon/getCouponByCategorySlug/${slug}`);
-        console.log("---data---", response.data.data)
-        setOffers(response.data.data);
+           const reversedData = response.data.data.reverse();
+        // console.log("---data---", response.data.data)
+        setOffers(reversedData);
       } catch (error) {
         console.log(error);
       }
@@ -29,68 +30,68 @@ export const Offers = ({slug}) => {
 
  
 
-  const couponData = [
-  {
-    heading: "Exclusive Coupons – Upto 30% (Upto Rs.5,000) New User Off On Domestic & International Flights",
-    data: [
-      "Get Upto 30% Coupon Off On Domestic & International Flight Bookings On Ixigo.",
-      "No Minimum Booking Amount Required To Avail The Offer.",
-      "Max Discount Of Rs.5,000 Can Be Availed.",
-      "Offer Valid For New Users Only.",
-      "Discount May Vary From Flights."
-    ],
-    image: "/images/ixigo-coupon-codes.jpg",
-    websiteLink: "https://www.couponzguru.com/trip-india-domestic-flight-coupon-code/"
-  },
-  {
-    heading: "Special Fare Offer – Flat 25% Off On All Domestic Flights For New Users",
-    data: [
-      "Avail Flat 25% Discount On Your First Flight Booking.",
-      "Applicable On All Domestic Airlines.",
-      "Max Discount Of Rs.3,000 Per Booking.",
-      "Offer Only For New Registered Users.",
-      "Use Code: FLYNEW25 At Checkout."
-    ],
-    image: "/images/Air-India-Logo.jpg",
-    websiteLink: "https://www.couponzguru.com/flight-deals/"
-  },
-  {
-    heading: "Student Special – Upto 20% Off + Extra Baggage On Domestic Flights",
-    data: [
-      "Students Can Avail Upto 20% Off On Domestic Flights.",
-      "Additional 10Kg Baggage Allowance Included.",
-      "Valid Student ID Must Be Provided.",
-      "Applicable On Select Airlines Only.",
-      "Limited Period Offer."
-    ],
-    image: "/images/Airasia-coupons-codes-1.jpg",
-    websiteLink: "https://www.couponzguru.com/student-flight-offers/"
-  },
-  {
-    heading: "International Getaway – Flat Rs.4,000 Off On First Booking",
-    data: [
-      "Flat Rs.4,000 Discount On International Flight Booking.",
-      "No Promo Code Required.",
-      "Valid Only On Select Routes.",
-      "Offer Applicable Once Per User.",
-      "Limited Time Offer, Book Now!"
-    ],
-    image: "/images/almatar-coupon-codes.jpg",
-    websiteLink: "https://www.couponzguru.com/international-flight-coupons/"
-  },
-  {
-    heading: "Weekend Sale – Upto 35% Off On Round-Trip Domestic Flights",
-    data: [
-      "Book Round-Trip Domestic Flights And Save Upto 35%.",
-      "Valid From Friday To Sunday Every Week.",
-      "Maximum Discount Of Rs.6,000 Per Booking.",
-      "Offer Valid For All Users.",
-      "No Code Needed – Auto Applied At Checkout."
-    ],
-    image: "/images/Travala-coupon-codes.jpg",
-    websiteLink: "https://www.couponzguru.com/flight-coupon-code-offers/"
-  }
-];
+//   const couponData = [
+//   {
+//     heading: "Exclusive Coupons – Upto 30% (Upto Rs.5,000) New User Off On Domestic & International Flights",
+//     data: [
+//       "Get Upto 30% Coupon Off On Domestic & International Flight Bookings On Ixigo.",
+//       "No Minimum Booking Amount Required To Avail The Offer.",
+//       "Max Discount Of Rs.5,000 Can Be Availed.",
+//       "Offer Valid For New Users Only.",
+//       "Discount May Vary From Flights."
+//     ],
+//     image: "/images/ixigo-coupon-codes.jpg",
+//     websiteLink: "https://www.couponzguru.com/trip-india-domestic-flight-coupon-code/"
+//   },
+//   {
+//     heading: "Special Fare Offer – Flat 25% Off On All Domestic Flights For New Users",
+//     data: [
+//       "Avail Flat 25% Discount On Your First Flight Booking.",
+//       "Applicable On All Domestic Airlines.",
+//       "Max Discount Of Rs.3,000 Per Booking.",
+//       "Offer Only For New Registered Users.",
+//       "Use Code: FLYNEW25 At Checkout."
+//     ],
+//     image: "/images/Air-India-Logo.jpg",
+//     websiteLink: "https://www.couponzguru.com/flight-deals/"
+//   },
+//   {
+//     heading: "Student Special – Upto 20% Off + Extra Baggage On Domestic Flights",
+//     data: [
+//       "Students Can Avail Upto 20% Off On Domestic Flights.",
+//       "Additional 10Kg Baggage Allowance Included.",
+//       "Valid Student ID Must Be Provided.",
+//       "Applicable On Select Airlines Only.",
+//       "Limited Period Offer."
+//     ],
+//     image: "/images/Airasia-coupons-codes-1.jpg",
+//     websiteLink: "https://www.couponzguru.com/student-flight-offers/"
+//   },
+//   {
+//     heading: "International Getaway – Flat Rs.4,000 Off On First Booking",
+//     data: [
+//       "Flat Rs.4,000 Discount On International Flight Booking.",
+//       "No Promo Code Required.",
+//       "Valid Only On Select Routes.",
+//       "Offer Applicable Once Per User.",
+//       "Limited Time Offer, Book Now!"
+//     ],
+//     image: "/images/almatar-coupon-codes.jpg",
+//     websiteLink: "https://www.couponzguru.com/international-flight-coupons/"
+//   },
+//   {
+//     heading: "Weekend Sale – Upto 35% Off On Round-Trip Domestic Flights",
+//     data: [
+//       "Book Round-Trip Domestic Flights And Save Upto 35%.",
+//       "Valid From Friday To Sunday Every Week.",
+//       "Maximum Discount Of Rs.6,000 Per Booking.",
+//       "Offer Valid For All Users.",
+//       "No Code Needed – Auto Applied At Checkout."
+//     ],
+//     image: "/images/Travala-coupon-codes.jpg",
+//     websiteLink: "https://www.couponzguru.com/flight-coupon-code-offers/"
+//   }
+// ];
 
 
 

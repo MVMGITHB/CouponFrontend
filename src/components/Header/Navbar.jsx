@@ -47,7 +47,7 @@ useEffect(() => {
 
   return (
     <header className="bg-white text-black shadow-md sticky top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-[1360px] mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left section: Logo */}
         <Link href="/">
           <img
@@ -78,12 +78,12 @@ useEffect(() => {
           <SearchMobile/>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium">
+        <nav className="hidden md:flex gap-6 text-xl font-medium">
           {navItems.map(({ label, href }) => (
             <Link
               key={label}
               href={href || "#"}
-              className="hover:text-yellow-400 transition"
+className="hover:text-amber-500 hover:underline transition-colors duration-200"
             >
               {label}
             </Link>

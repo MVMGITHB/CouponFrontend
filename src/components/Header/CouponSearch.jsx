@@ -56,19 +56,19 @@ const CouponSearch = () => {
   return (
     <div className=" hidden md:block relative w-[300px] ">
       {/* Search Bar */}
-      <div className="hidden md:flex items-center w-full rounded-md bg-[#3b404b] px-2 py-1 border border-[#505866]">
+<div className="hidden md:flex items-center w-full  bg-white px-4 py-2 ">
         <Input
           type="text"
           placeholder="Search Products"
           value={query}
           onChange={handleInputChange}
-          className="border-none bg-transparent text-white placeholder:text-gray-400 focus-visible:ring-0 focus-visible:outline-none"
+ className="w-full px-4 py-2 rounded-md bg-white/10 text-gray-600 placeholder:text-gray-400 border border-gray-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all duration-200"
         />
         <Button
           size="icon"
-          className="rounded-md bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white"
+          className=" bg-[#5e6ad2] hover:bg-[#4e5ac2] text-white"
         >
-          <MdSearch className="text-xl" />
+          <MdSearch className="text-2xl" />
         </Button>
       </div>
 
@@ -77,23 +77,23 @@ const CouponSearch = () => {
         {loading && <div className="text-white mt-3">Loading...</div>}
 
       {!loading && results.length > 0 && (
-        <div className="mt-3 bg-[#2e323d] text-white p-4 rounded-md space-y-3">
-          {results.map((coupon) => (
+   <div className="mt-3 bg-white shadow-lg rounded-md text-gray-800 p-2 space-y-1 max-h-60 overflow-y-auto border border-gray-200">
+  {results.map((coupon) => (
+    <Link href={`/${coupon?.category?.slug}`} key={coupon._id}>
+      <div className="group cursor-pointer px-3 py-2 rounded-md hover:bg-gray-100 transition-all">
+        <p className="text-sm font-medium text-gray-700 group-hover:text-amber-600">
+          {coupon.title}
+        </p>
+      </div>
+    </Link>
+  ))}
+</div>
 
-            <Link href={`/${coupon?.category?.slug}`}>
-             <div key={coupon._id} className=" cursor-pointer border-b border-[#444] pb-2">
-              <p className="text-[12px] text-white">{coupon.title}</p>
-            </div>
-            </Link>
-            
-          ))}
 
-          
-        </div>
       )}
 
 {!loading && query.trim() !== '' && results.length === 0 && (
-  <div className="mt-3 bg-[#2e323d] text-white p-4 rounded-md space-y-3">
+  <div className="mt-3  bg-white shadow-lg rounded-md text-gray-800 p-2 space-y-1 max-h-60 overflow-y-auto border border-gray-200">
     No results found
   </div>
 )}

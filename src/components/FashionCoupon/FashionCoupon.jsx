@@ -5,7 +5,7 @@ import { OffersSecond } from "./OffersSecond";
 
 export default function FashionCoupon({slug,images}) {
   return (
-    <div className="bg-black ">
+    <div className="bg-gray-50 ">
 
       <div className="max-w-[1400px] mx-auto px-[10px]">
         <Fashion images={images} />

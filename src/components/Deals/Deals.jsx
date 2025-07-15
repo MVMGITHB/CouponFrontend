@@ -15,7 +15,6 @@ export default function Deals() {
   const fetchOffers = async () => {
     try {
       const response = await axios.get(base_url + `/api/dealOnFire/getAll`);
-      console.log("---data---", response.data[0].coupon)
       setDeals(response.data[0].coupon);
     } catch (error) {
       console.log(error);
@@ -55,6 +54,7 @@ export default function Deals() {
 
 
    const handleOpenModal = (offer) => {
+
  
 
     const test = {
@@ -104,7 +104,7 @@ export default function Deals() {
 
       <div className="max-w-[1400px] mx-auto px-12 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
-          {deals.slice(0,5).map((deal, index) => (
+          {deals.slice(0,10).map((deal, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"

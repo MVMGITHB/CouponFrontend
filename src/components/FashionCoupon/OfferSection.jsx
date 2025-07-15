@@ -103,7 +103,9 @@ const data = [
       data?.map((item,index)=>{
          return (<>
              
-      <div className="bg-gray-300 text-center shadow-lg border border-b-cyan-950 rounded-md p-2 flex flex-col justify-between h-auto md:h-[170px]">
+      <div
+      key={index}
+      className="bg-gray-300 text-center shadow-lg border border-b-cyan-950 rounded-md p-2 flex flex-col justify-between h-auto md:h-[170px]">
       <img 
         src={item?.image}
         alt="Fashion" 
