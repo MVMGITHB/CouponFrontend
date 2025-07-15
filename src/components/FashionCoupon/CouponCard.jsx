@@ -10,8 +10,8 @@ const CouponCard = ({ coupon }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState("");
   const [isActivated, setIsActivated] = useState(false);
-
-
+  
+  
   const visibleData = expanded
     ? coupon?.description1
     : coupon?.description1.slice(0, 2);

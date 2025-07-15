@@ -10,7 +10,7 @@ import Link from "next/link";
 const jobs = [
     {
         image1: "/images/MyntraBanner.png",
-        link:"https://trackback.gotrackier.com/click?campaign_id=32267&pub_id=771&p1=%7Byour-transaction-id%7D&source=%7Byour-sub-aff-id%7D"
+        link:"https://www.myntra.com/?utm_source=gh_ht&utm_medium=ht_rev&utm_campaign=gh_ht_listicle50t"
     },
 
     {
@@ -23,22 +23,21 @@ const jobs = [
         link:"https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=couponsculture%20&redirect=https://www.ajio.com/s/50to90percentoff-133938"
     },
     {
-        image1: "/images/banner1.jpg",
+        image1: "/images/LeviIBanner.png",
+        link:"https://spectrum.gotrackier.com/click?campaign_id=520&pub_id=375"
+        
+    },
+    {
+        image1: "/images/McaffieneBanner.png",
         link:"https://trackback.gotrackier.com/click?campaign_id=32329&pub_id=771&p1=%7Byour-transaction-id%7D&source=%7Byour-sub-aff-id%7D"
         
     },
-
     {
-        image1: "/images/banner2.jpg",
-                link:"https://www.myntra.com/"
-
+        image1: "/images/Samsungbanner.png",
+        link:"https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376"   
     },
 
-    {
-       image1: "/images/banner3.jpg",
-        link:"https://www.myntra.com/"
-
-    },
+ 
 
 ]
 

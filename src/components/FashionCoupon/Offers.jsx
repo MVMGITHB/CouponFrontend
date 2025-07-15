@@ -18,7 +18,7 @@ export const Offers = ({slug}) => {
         const response = await axios.get(base_url + `/api/coupon/getCouponByCategorySlug/${slug}`);
            const reversedData = response.data.data.reverse();
         // console.log("---data---", response.data.data)
-        setOffers(reversedData);
+        setOffers(reversedData); 
       } catch (error) {
         console.log(error);
       }
