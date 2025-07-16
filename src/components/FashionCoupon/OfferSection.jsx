@@ -59,6 +59,7 @@ const data = [
     ],
        logo:"/images/ixigo-coupon-codes.jpg"
    }
+   
     setSelectedOffer(test1);
     setIsModalOpen(true);
 

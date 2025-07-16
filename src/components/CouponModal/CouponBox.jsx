@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 export default function CouponBox({ code}) {
+
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -15,6 +16,8 @@ export default function CouponBox({ code}) {
 
   return (
     <div className="flex justify-center items-center mt-2 gap-2">
+  {code ? (
+    <>
       <div className="border-2 border-[#0d65a0] bg-[#DCEEFF] rounded-b-md">
         <h4 className="text-2xl text-[#0d65a0] px-4 py-1">{code}</h4>
       </div>
@@ -26,6 +29,11 @@ export default function CouponBox({ code}) {
       >
         {copied ? "Copied!" : "Copy code"}
       </p>
-    </div>
+    </>
+  ) : (
+    <p  className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 rounded self-center">Deal Activated</p>
+  )}
+</div>
+
   );
 }

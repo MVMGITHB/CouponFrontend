@@ -6,6 +6,7 @@ export default function Modal1({ isOpen, onClose, offer }) {
     if (!isOpen) return null;
     
     const {title , website , code , description , logo} = offer
+    
   
     return (
       <div className="fixed inset-0 bg-black/30 flex justify-center items-center  z-[999] px-4">

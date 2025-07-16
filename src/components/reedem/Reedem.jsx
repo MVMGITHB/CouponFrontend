@@ -30,6 +30,8 @@ export const Reedem = () => {
     }
   }, [offer]);
 
+
+
   if (!offer) {
     return (
       <div className="h-[90vh] flex items-center justify-center bg-gradient-to-b from-blue-500 to-purple-600">
@@ -50,9 +52,16 @@ export const Reedem = () => {
 
           <p className="text-[25px] text-black text-center">Coupon Code Copied Successfully</p>
 
-          <div className="w-[70%] mx-auto border border-dotted border-blue-500 p-[10px] bg-blue-100">
-            <p className="text-center text-blue-400">{offer.code}</p>
-          </div>
+         <div className="w-[70%] mx-auto border border-dotted border-blue-500 p-[10px] bg-blue-100">
+  {offer.code ? (
+    <p className="text-center text-blue-400">{offer.code}</p>
+  ) : (
+    <p className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium px-4 py-2 rounded self-center text-center">
+      Deal Activated
+    </p>
+  )}
+</div>
+
 
           <p className="text-center">Please wait while we redirect you to the offer page</p>
 
