@@ -1,9 +1,31 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal1 from '../CouponModal/Modal1'
+import axios from 'axios'
+import base_url from '../helper/baseurl'
+export const OfferSection = ({slug}) => {
 
-export const OfferSection = () => {
+
+
+   const [offers, setOffers] = useState([]);
+  
+    const fetchOffers = async () => {
+      try {
+        const response = await axios.get(base_url + `/api/coupon/getCouponByCategorySlug/${slug}`);
+           const reversedData = response.data.data.reverse();
+        // console.log("---data---", response.data.data)
+        setOffers(reversedData); 
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    useEffect(() => {
+      fetchOffers()
+    }, [])
+
+    console.log("offer",offers)
 
 const data = [
   {
@@ -40,24 +62,19 @@ const data = [
     //   title , website , code , description , logo
    const handleOpenModal = (offer) => {
 
+    // console.log("item",item) 
 
     const test = {
-      code:"GSTIN",
-      website:"https://top5shots.com/"
+      code:offer.code,
+      website:offer?.website || "https://top5shots.com/"
    }
 
    const test1 = {
-    title:"Exclusive Coupon – Upto 50% OFF + Extra 25% OFF On Jewellery",
-    code:"GSTIN",
-      website:"https://top5shots.com/",
-      description:[
-      "Book Round-Trip Domestic Flights And Save Upto 35%.",
-      "Valid From Friday To Sunday Every Week.",
-      "Maximum Discount Of Rs.6,000 Per Booking.",
-      "Offer Valid For All Users.",
-      "No Code Needed – Auto Applied At Checkout."
-    ],
-       logo:"/images/ixigo-coupon-codes.jpg"
+      title:offer.title,
+      code:offer.code,
+      website:offer?.website || "https://top5shots.com/",
+      description:offer.description1,
+      logo:`${base_url}${offer?.logo}`
    }
    
     setSelectedOffer(test1);
@@ -99,24 +116,28 @@ const data = [
           />
           
 
-          <div className="grid grid-rows-3 w-full md:w-48 gap-4 py-4 mx-auto ">
+          <div className="grid  w-full md:w-48 gap-4 py-4 mx-auto ">
     {
-      data?.map((item,index)=>{
+      offers?.map((item,index)=>{
          return (<>
-             
-      <div
+
+
+
+         {
+          item?.code && item?.description1 && item?.discount && item?.logo && item?.website && item?.title &&( <div
       key={index}
       className="bg-gray-300 text-center shadow-lg border border-b-cyan-950 rounded-md p-2 flex flex-col justify-between h-auto md:h-[170px]">
       <img 
-        src={item?.image}
+       src={`${base_url}${item?.logo}`}
         alt="Fashion" 
-        className="w-full h-auto object-cover rounded"
+        className="w-full h-[50px] object-contain rounded"
       />
-      <h1 className="text-white font-semibold text-base mt-2">{item?.offer}</h1>
-   
-
-      <button  onClick={() => handleOpenModal({data})} className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium text-[13px] px-4 py-2 rounded self-center"> GET THIS COUPON</button>
-    </div>
+      <h4 className="text-white font-semibold text-base mt-2">{item?.discount}</h4>
+      <button  onClick={() => handleOpenModal(item)} className="cursor-pointer gettouchcoupon-btn bg-teal-500 hover:bg-teal-600 text-white font-medium text-[13px] px-4 py-2 rounded self-center"> GET THIS COUPON</button>
+    </div>)
+         }
+             
+     
          </>)
       })
     }

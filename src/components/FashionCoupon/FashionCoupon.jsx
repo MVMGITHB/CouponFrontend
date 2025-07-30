@@ -10,9 +10,9 @@ export default function FashionCoupon({slug,images}) {
       <div className="max-w-[1400px] mx-auto px-[10px]">
         <Fashion images={images} />
       <div className="flex flex-col md:flex-row lg:flex-row mx-auto lg:items-start gap-6">
-        <OfferSection />
+        <OfferSection slug={slug} />
         <Offers slug={slug}/> 
-        <OffersSecond />
+        <OffersSecond slug={slug}/>
       </div>
       </div>
       
