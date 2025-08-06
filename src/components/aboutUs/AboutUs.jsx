@@ -1,145 +1,96 @@
 import Link from "next/link";
 
-
 export default function AboutUs() {
   return (
-<div className="bg-gray-100 ">
-{/* Hero Section */}
-      <section
-        className="relative w-full h-80 md:h-170 flex items-center justify-center text-center aboutus"
-      >
+    <div className="bg-gray-100">
+      {/* Hero Section */}
+      <section className="relative w-full h-80 md:h-170 flex items-center justify-center text-center aboutus">
         <div className="bg-black bg-opacity-50 p-10 rounded-xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white">
             About Us
           </h1>
           <p className="text-lg text-gray-300 mt-2">
-            Our mission is to build amazing digital experiences.
+            Helping you shop smarter with verified deals and discounts.
           </p>
         </div>
       </section>
 
-      <section className="py-6 lg:py-8 w-[90%] lg:w-[70%] mx-auto ">
+      <section className="py-6 lg:py-8 w-[90%] lg:w-[70%] mx-auto">
         <h2 className="text-3xl font-bold text-gray-800">
-          About Us | Job Ki Tyaari - Trusted Job Alert Platform
+          About Coupons Culture – Your Smart Savings Partner
         </h2>
-        <p className="mt-4 text-gray-600   text-justify">
-          Discover Job Ki Tyaari—your trusted platform for verified government
-          jobs, PSU careers, private job updates, and expert preparation tips.
-          Stay ahead with daily alerts.
+        <p className="mt-4 text-gray-600 text-justify">
+          Welcome to <strong>CouponsCulture.com</strong>, India’s trusted platform for
+          finding verified coupons, promo codes, and savings on top categories like
+          fashion, electronics, food delivery, travel, and more.
         </p>
-        <p className="mt-4 text-gray-600   text-justify">
-          Welcome to <strong>Job Ki Tyaari</strong>, your trusted partner in
-          achieving your dream career.
+
+        <p className="mt-4 text-gray-600 text-justify">
+          Our mission is simple — to help smart shoppers discover the best discounts and
+          offers across the web, all in one convenient place.
         </p>
-        <p className="mt-4 text-gray-600  text-justify">
-          In today's competitive job market, staying updated with verified and
-          timely job information is not just helpful it's essential. At{" "}
-          <strong>Job Ki Tyaari</strong>, we bring you the{" "}
-          <strong>
-            latest job alerts, exam syllabus, eligibility criteria
-          </strong>
-          , and <strong>application details</strong> across
-        </p>
-        <ul className="list-none space-y-2 mt-4 text-gray-600   text-justify">
-          <li>
-            {" "}
-            -{" "}
-            <Link href="/government-jobs">
-              <span className="text-blue-600 underline"> Government Jobs</span>
-            </Link>
-            (Central & State)
-          </li>
-          <li>
-            -
-            <Link href="/technology-jobs" className="text-blue-600 underline">
-              Teaching Jobs Opportunities
-            </Link>
-          </li>
-          <li>
-            -{" "}
-            <Link href="/psu-jobs" className="text-blue-600 underline">
-              PSU
-            </Link>{" "}
-            (Public Sector Undertakings)
-          </li>
-          <li>
-            -
-            <Link href="/technology-jobs" className="text-blue-600 underline">
-              Technical and Engineering
-            </Link>{" "}
-            Roles
-          </li>
-          <li>- Private Sector Positions</li>
+
+        <h2 className="text-3xl font-bold text-gray-800 mt-6">What We Offer</h2>
+        <ul className="list-disc pl-6 mt-4 text-gray-600 text-justify space-y-2">
+          <li>Verified and updated coupons daily</li>
+          <li>Exclusive deals from top Indian and global brands</li>
+          <li>Discounts on fashion, electronics, groceries, travel, and more</li>
+          <li>Category-wise deal pages for easy navigation</li>
+          <li>User-friendly experience for quick savings</li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-gray-800 mt-4">Our Mission </h2>
-        <p className="mt-4 text-gray-600   text-justify">
-          Our mission is simple — to empower every job seeker in India by
-          providing accurate, fast, and comprehensive career updates in one
-          place. We believe no opportunity should be missed due to a lack of
-          timely information.
-        </p>
-
-        <h2 className="text-3xl font-bold text-gray-800 mt-4">
-          Why Trust Job Ki Tayyari?{" "}
+        <h2 className="text-3xl font-bold text-gray-800 mt-6">
+          Our Popular Categories
         </h2>
-        <p className="mt-2 text-gray-600   text-justify">
-          Unlike scattered or unreliable sources, our team{" "}
-          <strong>scans official websites daily </strong> to bring you:
-        </p>
-
-        <ul className=" space-y-2 mt-4 text-gray-600   text-justify">
-          <li className="text-blue-600 underline"> Latest job notifications</li>
-          <li> Application start/end dates</li>
-          <li> Eligibility and educational requirements</li>
-          <li> Direct application links</li>
-          <li> Exam syllabus and study guides</li>
+        <ul className="list-none mt-4 text-gray-600 text-justify space-y-2">
+          <li>
+            - <Link href="/fashion-coupon" className="text-blue-600 underline">Fashion</Link> Coupons
+          </li>
+          <li>
+            - <Link href="/electronic-coupon" className="text-blue-600 underline">Electronics</Link> Discounts
+          </li>
+          <li>
+            - <Link href="/food-coupon" className="text-blue-600 underline">Food & Grocery</Link> Offers
+          </li>
+          <li>
+            - <Link href="/travel-coupon" className="text-blue-600 underline">Travel</Link> Deals
+          </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-gray-800 mt-4">
-          Why Trust Job Ki Tayyari?
+        <h2 className="text-3xl font-bold text-gray-800 mt-6">
+          Why Trust Coupons Culture?
         </h2>
-        <p className="mt-4 text-gray-600  text-justify">
-          <span className="text-black text-lg font-bold">
-            Verified Updates Only:{" "}
-          </span>
-          Sourced from official sites like{" "}
-          <Link href="/" className="text-blue-600 underline">
-            UPSC
-          </Link>
-          , SSC, State PSCs, and major PSUs.
-        </p>
-        <p className="mt-2 text-gray-600  mx-auto text-justify">
-          <span className="text-black text-lg font-bold">
-            Comprehensive Coverage:{" "}
-          </span>
-          One-stop portal for all sectors.
-        </p>
-        <p className="mt-2 text-gray-600  text-justify">
-          <span className="text-black text-lg font-bold">
-            User-Centric Design:{" "}
-          </span>{" "}
-          Easy navigation and mobile-friendly layout.
-        </p>
+        <ul className="list-disc pl-6 mt-4 text-gray-600 text-justify space-y-2">
+          <li>
+            <strong>Verified Listings Only:</strong> All coupons and deals are checked regularly.
+          </li>
+          <li>
+            <strong>Zero Spam:</strong> No fake links or expired coupons.
+          </li>
+          <li>
+            <strong>Updated Daily:</strong> Fresh and relevant savings—every day.
+          </li>
+          <li>
+            <strong>Mobile Friendly:</strong> Browse and save from any device.
+          </li>
+        </ul>
 
-        <h2 className="text-3xl font-bold text-gray-800 mt-4">
-          Start Your Career Journey With Us
+        <h2 className="text-3xl font-bold text-gray-800 mt-6">
+          Start Saving with Us Today!
         </h2>
-        <p className="mt-2 text-gray-600   text-justify">
-          Whether you're preparing for a <strong> government exam</strong>,
-          applying for a <strong>PSU job</strong>, or starting in the{" "}
-          <strong>private sector</strong>, Job Ki Tyaari is here to help.
+        <p className="mt-4 text-gray-600 text-justify">
+          Whether you're buying clothes, booking flights, or ordering food—make sure
+          you check CouponsCulture.com first. Our goal is to help you save more on
+          every purchase.
         </p>
-        <p className="mt-4 text-gray-600   text-justify">
+        <p className="mt-4 text-gray-600 text-justify">
           Bookmark{" "}
           <Link href="/" className="text-blue-600 underline">
-            JobKiTyaari.com
+            CouponsCulture.com
           </Link>{" "}
-          and never miss an opportunity again!{" "}
+          and never miss a deal again!
         </p>
       </section>
-
-     
     </div>
   );
 }
