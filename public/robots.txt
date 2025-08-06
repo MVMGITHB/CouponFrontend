@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Allow: /
+
+Sitemap: https://couponsculture.com/sitemap.xml
