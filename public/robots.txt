@@ -4,4 +4,20 @@ Disallow: /login/
 Disallow: /dashboard/
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://couponsculture.com/sitemap.xml
+Sitemap: https://couponsculture.com/llms.txt
