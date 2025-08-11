@@ -1,42 +1,54 @@
 "use client";
 
 import { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 import { useRouter } from "next/navigation";
-import base_url from "../helper/baseurl"
+import base_url from "../helper/baseurl";
+
 export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
+    agree: false, // ✅ added for checkbox
   });
 
   const [loading, setLoading] = useState(false);
-  const [err, setError] = useState(false);
-  const router=useRouter()
-  const handleChange = async (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const [err, setError] = useState("");
+  const router = useRouter();
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    
+    // ✅ Require agreement
+    if (!formData.agree) {
+      setError("You must agree to receive communications before registering.");
+      return;
+    }
+
     setLoading(true);
-    router.push('/login')
-    setError(false); 
 
     try {
-     const response  = await axios.post(base_url + "/api/user/register", formData)
-     setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-     })
-
-     console.log(response.data)
+      const response = await axios.post(base_url + "/api/user/register", formData);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        agree: false,
+      });
+      console.log(response.data);
+      router.push("/login");
     } catch (error) {
-      setError(true);
-      console.log(error)
+      setError("Something went wrong. Please try again.");
+      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -49,13 +61,13 @@ export default function Signup() {
         <img
           src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg"
           alt="Sign up illustration"
-          className="w-4/5 "
+          className="w-4/5"
         />
       </div>
 
       {/* Right Side Form */}
       <div className="w-full md:w-1/2 px-6 py-10 max-w-xl">
-        <div className=" p-8">
+        <div className="p-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
             Create Account
           </h2>
@@ -64,7 +76,9 @@ export default function Signup() {
             {/* First & Last Name */}
             <div className="flex gap-4">
               <div className="w-1/2">
-                <label className="block text-sm font-medium text-gray-700">First Name</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  First Name
+                </label>
                 <input
                   type="text"
                   name="firstName"
@@ -75,7 +89,9 @@ export default function Signup() {
                 />
               </div>
               <div className="w-1/2">
-                <label className="block text-sm font-medium text-gray-700">Last Name</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Last Name
+                </label>
                 <input
                   type="text"
                   name="lastName"
@@ -89,7 +105,9 @@ export default function Signup() {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -102,7 +120,9 @@ export default function Signup() {
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Password</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Password
+              </label>
               <input
                 type="password"
                 name="password"
@@ -111,6 +131,22 @@ export default function Signup() {
                 required
                 className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm text-black focus:ring-2 focus:ring-blue-500 outline-none"
               />
+            </div>
+
+            {/* ✅ Agreement Checkbox */}
+            <div className="flex items-start gap-2">
+              <input
+                type="checkbox"
+                name="agree"
+                checked={formData.agree}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <label className="text-sm text-gray-700">
+                I agree to receive communication regarding various offers and products
+                through Call, Email, SMS, Whatsapp, etc. from{" "}
+                <strong>couponsculture.com</strong> & its partners.
+              </label>
             </div>
 
             {/* Submit Button */}
@@ -124,7 +160,7 @@ export default function Signup() {
 
             {err && (
               <p className="text-center text-red-500 mt-3">
-                Something went wrong. Please try again.
+                {err}
               </p>
             )}
           </form>
