@@ -10,7 +10,7 @@ export default function CouponsCulturePopup() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000); // Show after 3 seconds
+    }, 7000); // Show after 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
