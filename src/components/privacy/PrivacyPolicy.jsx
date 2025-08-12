@@ -31,10 +31,10 @@ export default function PrivacyPolicy() {
               <li>
                 Go to{" "}
                 <a
-                  href="https://mvmbs.com/"
+                  href="https://couponsculture.com/"
                   className="text-blue-600 underline"
                 >
-                  https://mvmbs.com/
+                  <strong>www.CoupansCulture.com</strong>
                 </a>
                 , or any of our websites that have links to this privacy
                 statement.
@@ -246,7 +246,8 @@ export default function PrivacyPolicy() {
                   notice or our practices, please contact us at:
                 </p>
                 <p className="text-base font-normal mt-2 text-[16px] text-gray-600 text-justify">
-                  <strong> Email:</strong> contact@jobkityaari.com
+                  <strong> Email:</strong>{" "}
+                  <strong>contact@CoupansCulture.com</strong>
                 </p>
               </li>
             </ol>
