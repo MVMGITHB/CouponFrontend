@@ -66,13 +66,13 @@ const data = [
 
     const test = {
       code:offer.code,
-      website:offer?.website || "https://top5shots.com/"
+      website:offer?.website || "https://CouponCulture.com.com/"
    }
 
    const test1 = {
       title:offer.title,
       code:offer.code,
-      website:offer?.website || "https://top5shots.com/",
+      website:offer?.website || "https://CouponCulture.com.com/",
       description:offer.description1,
       logo:`${base_url}${offer?.logo}`
    }
