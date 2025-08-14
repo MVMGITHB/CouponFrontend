@@ -86,6 +86,8 @@ function Header() {
           ))}
         </nav>
 
+        <img src="/images/image.png" alt="" className=" w-[50px]" />
+
         {/* Search Input */}
         {/* <div className="hidden md:flex items-center w-1/3 rounded-md bg-[#3b404b] px-2 py-1 border border-[#505866]">
           <Input
