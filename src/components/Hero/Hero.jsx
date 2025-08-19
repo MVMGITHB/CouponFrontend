@@ -17,6 +17,8 @@ const Hero = () => {
       </div>
     </div> */}
 
+    {/* <div></div> */}
+
     <Baner/>
     </div>
    
