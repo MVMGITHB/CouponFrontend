@@ -122,7 +122,7 @@ const router= useRouter();
 
         {/* Signup Link */}
         <h1 className="text-blue-400 pt-4 text-center">
-          <Link href="/signup">
+          <Link href="/register">
             Don't have account, please{" "}
             <span className="text-orange-400 font-semibold">Sign Up Now</span>
           </Link>
