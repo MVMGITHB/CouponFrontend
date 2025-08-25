@@ -3,7 +3,7 @@ import { AuthProvider } from "@/components/context/auth";
 import "./globals.css";
 import Header from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
-import CouponsCulturePopup from "@/components/popup/registerpopup";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       >
         <AuthProvider>
           <Header />
-          <CouponsCulturePopup />
+
           {children}
           <Footer />
         </AuthProvider>

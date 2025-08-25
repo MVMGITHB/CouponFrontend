@@ -26,7 +26,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    
+
     // ✅ Require agreement
     if (!formData.agree) {
       setError("You must agree to receive communications before registering.");
@@ -36,7 +36,10 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const response = await axios.post(base_url + "/api/user/register", formData);
+      const response = await axios.post(
+        base_url + "/api/user/register",
+        formData
+      );
       setFormData({
         firstName: "",
         lastName: "",
@@ -45,7 +48,7 @@ export default function Signup() {
         agree: false,
       });
       console.log(response.data);
-      router.push("/login");
+      router.push("/thankyou");
     } catch (error) {
       setError("Something went wrong. Please try again.");
       console.log(error);
@@ -143,8 +146,8 @@ export default function Signup() {
                 className="mt-1"
               />
               <label className="text-sm text-gray-700">
-                I agree to receive communication regarding various offers and products
-                through Call, Email, SMS, Whatsapp, etc. from{" "}
+                I agree to receive communication regarding various offers and
+                products through Call, Email, SMS, Whatsapp, etc. from{" "}
                 <strong>couponsculture.com</strong> & its partners.
               </label>
             </div>
@@ -158,11 +161,7 @@ export default function Signup() {
               {loading ? "Registering..." : "Register"}
             </button>
 
-            {err && (
-              <p className="text-center text-red-500 mt-3">
-                {err}
-              </p>
-            )}
+            {err && <p className="text-center text-red-500 mt-3">{err}</p>}
           </form>
         </div>
       </div>
