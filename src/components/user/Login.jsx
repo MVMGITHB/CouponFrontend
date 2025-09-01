@@ -5,6 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import {useAuth} from "../context/auth"
 import base_url from "../helper/baseurl";
+import { base_url1 } from "../helper/baseurl";
 import {useRouter} from 'next/navigation'
 export default function Login() {
   const [loading, setLoading] = useState(false);
@@ -31,7 +32,7 @@ const router= useRouter();
         password: formData.password,
       };
 
-      const response = await axios.post(base_url + "/api/user/login", formdata);
+      const response = await axios.post(base_url1 + "/api/users/login", formdata);
       if (response.data) {
         setFormData({ email: "", password: "" });
 
