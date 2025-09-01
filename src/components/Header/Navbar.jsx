@@ -36,6 +36,8 @@ function Header() {
     localStorage.removeItem("auth");
   };
 
+
+ 
   const pathname = usePathname();
 
   useEffect(() => {
@@ -115,7 +117,7 @@ function Header() {
                 <Avatar className="w-9 h-9 ring-2 ring-white">
                   <AvatarImage src={auth.user.avatarUrl || ""} />
                   <AvatarFallback>
-                    {auth.user.firstName?.charAt(0).toUpperCase() || "U"}
+                    {auth.user.name?.charAt(0).toUpperCase() || "U"}
                   </AvatarFallback>
                 </Avatar>
                 <span className="text-sm font-semibold">
