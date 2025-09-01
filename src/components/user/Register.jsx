@@ -3,12 +3,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import base_url from "../helper/baseurl";
+import base_url, { base_url1 } from "../helper/baseurl";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
+    phone: "",
     email: "",
     password: "",
     agree: false, // ✅ added for checkbox
@@ -37,12 +37,12 @@ export default function Signup() {
 
     try {
       const response = await axios.post(
-        base_url + "/api/user/register",
+        base_url1 + "/api/users/register",
         formData
       );
       setFormData({
-        firstName: "",
-        lastName: "",
+        name: "",
+        phone: "",
         email: "",
         password: "",
         agree: false,
@@ -80,12 +80,12 @@ export default function Signup() {
             <div className="flex gap-4">
               <div className="w-1/2">
                 <label className="block text-sm font-medium text-gray-700">
-                  First Name
+                  Name
                 </label>
                 <input
                   type="text"
-                  name="firstName"
-                  value={formData.firstName}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   required
                   className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm text-black focus:ring-2 focus:ring-blue-500 outline-none"
@@ -93,12 +93,12 @@ export default function Signup() {
               </div>
               <div className="w-1/2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Last Name
+                  Phone
                 </label>
                 <input
                   type="text"
-                  name="lastName"
-                  value={formData.lastName}
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   required
                   className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm text-black focus:ring-2 focus:ring-blue-500 outline-none"
