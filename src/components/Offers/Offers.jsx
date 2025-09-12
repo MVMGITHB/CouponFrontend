@@ -24,43 +24,7 @@ export default function Offers() {
     fetchOffers()
   }, [])
 
-  // const handleOpenModal = (offer) => {
-  //   setSelectedOffer(offer);
-  //   setIsModalOpen(true);
-
-  //   window.open('/reedem', '_blank');
-  // };
-
-
-  // const handleOpenModal = (offer) => {
-  //   setSelectedOffer(offer);
-  //   setIsModalOpen(true);
-
-  //   // Copy the offer code to clipboard
-  //   navigator.clipboard.writeText(offer.code)
-  //     .then(() => {
-  //       console.log("Code copied:", offer.code);
-  //     })
-  //     .catch((err) => {
-  //       console.error("Failed to copy code:", err);
-  //     });
-
-  //   const test = {
-  //     code: offer?.code,
-  //     website: offer?.website
-  //   }
-
-  //   // Open the redeem page in a new tab
-
-  //   // const encodedOffer = encodeURIComponent(JSON.stringify(offer));
-  //   // window.open(`/reedem?data=${encodedOffer}`, '_blank');
-
-
-  //   const encodedOffer = encodeURIComponent(btoa(JSON.stringify(test)));
-  //   window.open(`/reedem?data=${encodedOffer}`, '_blank');
-  //   // window.open('/reedem', '_blank');
-  // };
-
+  
    const handleOpenModal = (offer) => {
  
 
@@ -88,13 +52,6 @@ export default function Offers() {
     });
 
    
-
-  // Open the redeem page in a new tab
-
-  // const encodedOffer = encodeURIComponent(JSON.stringify(offer));
-  // window.open(`/reedem?data=${encodedOffer}`, '_blank');
-
-
   const encodedOffer = encodeURIComponent(btoa(JSON.stringify(test)));
   window.open(`/reedem?data=${encodedOffer}`, '_blank');
   };

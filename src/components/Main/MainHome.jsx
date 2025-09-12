@@ -12,7 +12,7 @@ const MainHome = () => {
       <Hero />
       {/* <Categories /> */}
       <Offers/>
-      {/* <Deals/> */}
+      <Deals/>
       
     </>
   );
