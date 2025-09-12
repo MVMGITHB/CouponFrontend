@@ -109,13 +109,13 @@ export default function Deals() {
               key={index}
               className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"
             >
-                <Image
+                {/* <Image
                src={`${base_url}${deal?.logo}`}
                 alt={`Offer ${index + 1}`}
                 width={128}
                 height={64}
                 className="object-contain mb-4"
-              />
+              /> */}
               <p className="text-gray-700 mb-6 text-[1.2rem] line-clamp-3">
                 {deal.title}
               </p>
