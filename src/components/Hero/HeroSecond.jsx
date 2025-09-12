@@ -49,6 +49,8 @@ export default function HeroSecond() {
                 <img
                   src={slide.banner}
                   alt="Banner"
+                   loading="lazy"
+                    decoding="async"
                   className="object-contain w-full h-72"
                 />
               </div>

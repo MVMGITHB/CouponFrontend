@@ -25,7 +25,7 @@ export const OfferSection = ({slug}) => {
       fetchOffers()
     }, [])
 
-    console.log("offer",offers)
+    
 
 const data = [
   {

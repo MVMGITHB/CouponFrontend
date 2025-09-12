@@ -62,6 +62,8 @@ export default function HeroFirst() {
                   src={slide.logo}
                   alt="Slide visual"
                   className="w-40 h-40 object-contain rounded-md shadow-md"
+                   loading="lazy"
+                    decoding="async"
                 />
                 <div className="border border-black p-2 rounded-md text-center">
                   <p className="text-sm text-gray-600 font-semibold">{slide.title}</p>

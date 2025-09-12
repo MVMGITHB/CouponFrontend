@@ -14,7 +14,6 @@ export default function Offers() {
   const fetchOffers = async () => {
     try {
       const response = await axios.get(base_url + `/api/bestOffer/getAll`);
-      console.log("---data---", response.data[0].coupon)
       setOffers(response.data[0].coupon);
     } catch (error) {
       console.log(error);
