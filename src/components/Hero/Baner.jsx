@@ -12,7 +12,7 @@ const jobs = [
     image1: "/images/MyntraBanner.webp",
     link: "https://www.myntra.com/?utm_source=gh_ht&utm_medium=ht_rev&utm_campaign=gh_ht_listicle50t",
   },
- {
+  {
     image1: "/images/FAbanner.webp",
     link: "https://trk.clickgenie.in/click?campaign_id=35873&pub_id=4562&p1=%7Byour-transaction-id%7D&source=%7Byour-sub-aff-id%7D",
   },
@@ -122,8 +122,12 @@ const Baner = () => {
                   <img
                     src={job?.image1}
                     alt="tag"
-                    className=" w-[400px]   lg:w-full  object-contain rounded-sm"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-[400px] lg:w-full object-contain rounded-sm"
                   />
+
+
                 </Link>
               </div>
             ))}
