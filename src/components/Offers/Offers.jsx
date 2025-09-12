@@ -74,7 +74,7 @@ export default function Offers() {
         className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 h-[340px] w-full"
       >
         {/* Fixed-height image container */}
-        {/* <div className="w-full h-[80px] flex items-center justify-center mb-4">
+        <div className="w-full h-[80px] flex items-center justify-center mb-4">
           <Image
             src={`${base_url}${deal?.logo}`}
             alt={`Offer ${index + 1}`}
@@ -82,7 +82,7 @@ export default function Offers() {
             height={64}
             className="object-contain max-h-full"
           />
-        </div> */}
+        </div>
 
         {/* Title with line clamp */}
         <p className="text-gray-700 text-[1.1rem] line-clamp-2 mb-4 h-[52px]">
