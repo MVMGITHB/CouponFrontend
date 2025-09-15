@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
                   href="https://couponsculture.com/"
                   className="text-blue-600 underline"
                 >
-                  <strong>www.CoupansCulture.com</strong>
+                  <strong>www.couponsculture.com</strong>
                 </a>
                 , or any of our websites that have links to this privacy
                 statement.
@@ -247,7 +247,7 @@ export default function PrivacyPolicy() {
                 </p>
                 <p className="text-base font-normal mt-2 text-[16px] text-gray-600 text-justify">
                   <strong> Email:</strong>{" "}
-                  <strong>contact@CoupansCulture.com</strong>
+                  <strong>contact@couponsculture.com</strong>
                 </p>
               </li>
             </ol>
