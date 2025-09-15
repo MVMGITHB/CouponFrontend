@@ -8,8 +8,8 @@ export default function TermsConditions() {
         {/* Hero Section */}
         <section className="relative h-80 md:h-140 flex items-center justify-center text-center bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url(/images/terms.png)' }}>
           <div className="bg-black bg-opacity-50 p-10 rounded-xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Terms & Conditions</h1>
-            <p className="text-lg text-gray-300 mt-2">Understand the rules and policies governing our services.</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">Terms of Use/Service</h1>
+            <p className="text-lg text-gray-300 mt-2">CouponsCulture.com </p>
           </div>
         </section>
 
