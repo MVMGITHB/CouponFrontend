@@ -98,9 +98,9 @@ export default function Deals() {
 
   return (
     <div className="py-12 ">
-      <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
         🎉 Deals on Fire
-      </h1>
+      </h2>
 
       <div className="max-w-[1400px] mx-auto px-12 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">

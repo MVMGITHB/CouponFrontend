@@ -43,7 +43,7 @@ export default function Page() {
 
   return (
     <>
-      <FashionCoupon slug="fashion-coupon" images={images} />
+      <FashionCoupon slug="fashion-coupon" images={images} heading={"Look Good, Spend Less - Fashion Deals You’ll Love"}/>
     </>
   );
 }

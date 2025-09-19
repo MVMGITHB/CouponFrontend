@@ -45,7 +45,7 @@ export default function Page() {
   return (
     <>
 
-      <FashionCoupon slug="food-coupon" images={images} />
+      <FashionCoupon slug="food-coupon" images={images} heading={"Tasty Discounts Served with Every Bite "}/>
    
     </>
   );

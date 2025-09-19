@@ -50,7 +50,7 @@ function Header() {
         {/* Left section: Logo */}
         <Link href="/">
           <img
-            src="/images/logo3.png"
+            src="/images/latestlogo.webp"
             alt="logo"
             className="h-[40px] md:h-[60px] w-auto"
           />
