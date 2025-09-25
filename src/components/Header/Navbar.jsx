@@ -46,13 +46,13 @@ function Header() {
 
   return (
     <header className="bg-white text-black shadow-md sticky top-0 left-0 right-0 z-50">
-      <div className="max-w-[1360px] mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-[1360px] mx-auto px-4  flex items-center justify-between">
         {/* Left section: Logo */}
         <Link href="/">
           <img
             src="/images/latestlogo.webp"
             alt="logo"
-            className="h-[40px] md:h-[60px] w-auto"
+            className="h-[50px] md:h-[100px] "
           />
 
           {/* CouponCulture */}
