@@ -6,6 +6,17 @@ const AjioButton = () => {
   const [isActivated, setIsActivated] = useState(false);
 
   const handleClick = () => {
+
+     if (typeof fbq === "function") {
+      fbq('track', 'Subscribe', {
+        value: '0.00',
+        currency: 'USD',
+        predicted_ltv: '0.00'
+      });
+    }
+
+
+    console.log("AJIO link clicked - Meta Pixel event fired");
     setIsActivated(true);
   };
 
