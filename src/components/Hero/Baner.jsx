@@ -127,7 +127,7 @@ const Baner = () => {
                     className="w-[400px] lg:w-full object-contain rounded-sm"
                   />
 
-
+                  
                 </Link>
               </div>
             ))}

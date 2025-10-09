@@ -132,7 +132,7 @@ export default function Deals() {
       <div className="py-5">
         <img
           src="/images/banner.webp"
-          alt=""
+          alt="Offer-banner"
           className="w-screen object-cover"
         />
       </div>

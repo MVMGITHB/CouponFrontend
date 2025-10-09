@@ -56,7 +56,8 @@ const CouponSearch = () => {
   return (
     <div className=" hidden md:block relative w-[300px] ">
       {/* Search Bar */}
-<div className="hidden md:flex items-center w-full  bg-white px-4 py-2 ">
+      {/* fix gap between search input and search button */}
+<div className="hidden md:flex items-center w-full  bg-white px-4 py-2 gap-[5px] ">
         <Input
           type="text"
           placeholder="Search Products"

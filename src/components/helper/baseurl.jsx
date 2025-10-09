@@ -2,4 +2,5 @@
 // const base_url = "https://coupanbackend-5iao.onrender.com";
 const base_url = "https://api.couponsculture.com";
 export const base_url1 = "https://user.couponsculture.com";
+export const BASE_URL = "https://api.shopsmaart.com"
 export default base_url;
