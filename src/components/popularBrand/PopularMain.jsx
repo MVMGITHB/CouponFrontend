@@ -78,7 +78,7 @@ const PopularMain = ({data , slug}) => {
   return (
     <div>
        
-        <PopularHero data={data} />
+        <PopularHero data={data} slug={slug}/>
         <CategoryOffer couponData={couponData} />
        
       

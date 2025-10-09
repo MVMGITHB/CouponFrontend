@@ -62,15 +62,33 @@ const CategoryHero = ({data}) => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-12">
         <div className="w-full lg:w-[950]" ref={imageRef}>
           <div className="rounded-2xl overflow-hidden  ">
-           <Image
-              src={data?.banner}
-              alt={data?.title || "Category Banner"}
-              width={700}
-              height={500}
-              className="object-cover w-full h-auto"
-              priority
-            />
-          </div>
+            
+               <Image
+        src="/b2a9f1d0-ca55-4fbf-91c1-c1e28b9be335.png"
+        alt="AJIO Diwali Offer"
+        fill
+        className="object-cover object-center"
+        priority
+        /> 
+        
+        
+        {/* {slug === "ajio" && (
+        <div className="absolute bottom-10 left-10 z-1000">
+          <Link
+            href="#offers"
+            ref={buttonRef}
+            className="bg-yellow-400 text-gray-900 font-semibold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-yellow-500 hover:scale-105 transition-transform duration-300"
+          >
+            GET CODE
+          </Link>
+        </div>
+      )} */}
+      
+      
+    
+         
+
+     
         </div>
 
         <div className="abril-fatface-regular w-full lg:w-1/2 flex flex-row items-end">
@@ -80,6 +98,7 @@ const CategoryHero = ({data}) => {
             dangerouslySetInnerHTML={{ __html: "" }}
           ></h1>
         </div>
+      </div>
       </div>
     </section>
   );

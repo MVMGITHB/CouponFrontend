@@ -32,30 +32,31 @@ const jobs = [
     image1: "/images/McaffieneBanner.webp",
     link: "https://trackback.gotrackier.com/click?campaign_id=32329&pub_id=771&p1=%7Byour-transaction-id%7D&source=%7Byour-sub-aff-id%7D",
   },
-  {
-    image1: "/images/Samsungbanner.webp",
-    link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
-  },
-  {
-    image1: "/images/10.webp",
-    link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
-  },
-  {
-    image1: "/images/11.webp",
-    link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
-  },
-  {
-    image1: "/images/12.webp",
-    link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
-  },
-  {
-    image1: "/images/13.webp",
-    link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
-  },
-  {
-    image1: "/images/14.webp",
-    link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
-  },
+  // {
+  //   image1: "/images/Samsungbanner.webp",
+  //   link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
+  // },
+
+  // {
+  //   image1: "/images/10.webp",
+  //   link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
+  // },
+  // {
+  //   image1: "/images/11.webp",
+  //   link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
+  // },
+  // {
+  //   image1: "/images/12.webp",
+  //   link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
+  // },
+  // {
+  //   image1: "/images/13.webp",
+  //   link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
+  // },
+  // {
+  //   image1: "/images/14.webp",
+  //   link: "https://spectrum.gotrackier.com/click?campaign_id=1700&pub_id=376",
+  // },
 ];
 
 const Baner = () => {

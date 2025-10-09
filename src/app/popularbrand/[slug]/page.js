@@ -1,5 +1,6 @@
 import PopularMain from '@/components/popularBrand/PopularMain';
 import React from 'react';
+import Popup from '../../../components/popup/Popup';
 
 const PopularBrand = {
   flipkart: {
@@ -12,7 +13,7 @@ const PopularBrand = {
   ajio: {
     title: "Ajio",
     desc: "Gadgets<br/> You’ll Love,<br/> Prices <br/> You’ll Love More.",
-    banner: "/popularbrand/ajio1.png",
+    banner: "/popularbrand/Ajionewbanner09oct.png",
     image1 :"/popularbrand/ajio2.png" , 
     image2 : "/popularbrand/ajio3.png"
   },
@@ -56,6 +57,7 @@ const page = async({ params }) => {
   return (
     <div>
       <PopularMain data={data} slug={slug} />
+      <Popup/>
     </div>
   );
 };

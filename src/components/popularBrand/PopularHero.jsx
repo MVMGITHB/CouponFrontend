@@ -3,16 +3,19 @@ import React , { useLayoutEffect, useRef } from 'react'
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Image from "next/image";
+import Link from 'next/link';
+import AjioButton from './AjioButton';
 
 gsap.registerPlugin(TextPlugin);
 
-const PopularHero = ({data}) => {
+const PopularHero = ({data,slug}) => {
 
  console.log("Banner data is " , data)
   const imageRef = useRef(null);
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
   const headingRef = useRef(null);
+  
 
   useLayoutEffect(() => {
     console.log("GSAP Animation triggered");
@@ -61,6 +64,10 @@ const PopularHero = ({data}) => {
          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
            <div className="w-full lg:w-[950]" ref={imageRef}>
              <div className="rounded-2xl overflow-hidden  ">
+
+
+              <div className=' relative '>
+
               <Image
                  src={data?.banner}
                  alt={data?.title || "Category Banner"}
@@ -69,6 +76,15 @@ const PopularHero = ({data}) => {
                  className="object-cover w-full h-auto"
                  priority
                />
+ 
+                {slug === "ajio" && (
+            <div className="absolute bottom-10 left-27 z-[1000]">
+              <AjioButton />
+              </div>
+              )}
+
+              </div>
+             
              </div>
            </div>
    
