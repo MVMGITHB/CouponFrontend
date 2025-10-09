@@ -90,6 +90,10 @@ const PopularHero = ({data,slug}) => {
    
            <div className="abril-fatface-regular  lg:w-1/2 flex flex-col items-start justify-center gap-10 ">
             <div className=" overflow-hidden  " ref={image1Ref} >
+              <Link
+                    href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=cc%20&redirect=https://www.ajio.com/s/50to90percentoff-140961"
+                    target="_blank"
+                    rel="noopener noreferrer">
               <Image
                  src={data?.image1}
                  alt={data?.title || "Category Banner"}
@@ -98,8 +102,13 @@ const PopularHero = ({data,slug}) => {
                  className="object-cover  h-auto"
                  priority
                />
+               </Link>
              </div>
              <div className=" overflow-hidden " ref={image2Ref}>
+              <Link
+                    href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=cc%20&redirect=https://www.ajio.com/s/50to90percentoff-140961"
+                    target="_blank"
+                    rel="noopener noreferrer">
               <Image
                  src={data?.image2}
                  alt={data?.title || "Category Banner"}
@@ -108,6 +117,7 @@ const PopularHero = ({data,slug}) => {
                  className="object-cover h-auto"
                  priority
                />
+               </Link>
              </div>
            </div>
          </div>

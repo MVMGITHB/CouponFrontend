@@ -21,7 +21,7 @@ const AjioButton = () => {
           : "bg-yellow-400 text-gray-900 hover:bg-yellow-500 hover:scale-105"
         }`}
     >
-      {isActivated ? "Activated" : "GET CODE"}
+      {isActivated ? "Code Activated" : "GET CODE"}
     </Link>
   );
 };

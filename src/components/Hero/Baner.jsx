@@ -9,6 +9,10 @@ import Link from "next/link";
 
 const jobs = [
   {
+    image1: "/Ajio2.png",
+    link: "https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=cc%20&redirect=https://www.ajio.com/s/50to90percentoff-140961",
+  },
+  {
     image1: "/images/MyntraBanner.webp",
     link: "https://www.myntra.com/?utm_source=gh_ht&utm_medium=ht_rev&utm_campaign=gh_ht_listicle50t",
   },
