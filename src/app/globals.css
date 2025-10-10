@@ -175,3 +175,8 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+
+.box-shadow-all{
+  box-shadow: rgba(21, 21, 21, 0.25) 0px 14px 28px, rgba(23, 23, 23, 0.22) 0px 10px 10px;
+}

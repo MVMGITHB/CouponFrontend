@@ -77,11 +77,20 @@ const PopularHero = ({data,slug}) => {
                  priority
                />
  
-                {slug === "ajio" && (
-            <div className="absolute bottom-10 left-27 z-[1000]">
-              <AjioButton />
-              </div>
-              )}
+{slug === "ajio" && (
+  <div
+    className="
+      absolute 
+      bottom-10 left-10 z-[1000] 
+      sm:bottom-8 sm:left-20 
+      md:bottom-10 md:left-27
+      scale-100 sm:scale-40 md:scale-100
+    "
+  >
+    <AjioButton />
+  </div>
+)}
+
 
               </div>
              

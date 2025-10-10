@@ -106,14 +106,14 @@ const CategoryOffer = ({couponData}) => {
 
   return (
     <section className="bg-gray-100 py-14">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className=" max-w-7xl mx-auto px-4">
        
 
 
  {couponData && couponData.length > 0 ? (
   
  
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16">
+       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16">
   {couponData.map((offer, index) => (
     <div
       key={offer._id || offer.id || index}
@@ -122,7 +122,7 @@ const CategoryOffer = ({couponData}) => {
   
 
       <div  onClick={(e) => handleOfferClick(e, offer)}
-                 className=" cursor-pointer bg-gray-100 box-shadow-all rounded-tl-xl rounded-tr-xl flex flex-col items-center justify-between p-5 sm:p-6 h-[220px] sm:h-[260px] hover:shadow-xl transition-all duration-300">
+                 className=" cursor-pointer  box-shadow-all bg-white rounded-tl-xl rounded-tr-xl flex flex-col items-center justify-between p-5 sm:p-6 h-[220px] sm:h-[260px] hover:shadow-xl transition-all duration-300">
        <div className="h-12 w-28 mb-3 flex items-center justify-center overflow-hidden">
   {/* <Image
     src={`https://api.shopsmaart.com${offer?.brand?.logo}`}
