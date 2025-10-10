@@ -60,7 +60,7 @@ const PopularHero = ({data,slug}) => {
   }, []);
 
   return (
-   <section className="bg-gray-100 pt-[110px] px-5  pb-[10px] overflow-hidden">
+   <section className="bg-gray-100 pt-[80px] px-5  pb-[10px] overflow-hidden">
          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
            <div className="w-full lg:w-[950]" ref={imageRef}>
              <div className="rounded-2xl overflow-hidden  ">
@@ -81,10 +81,10 @@ const PopularHero = ({data,slug}) => {
   <div
     className="
       absolute 
-      bottom-10 left-10 z-[1000] 
+      bottom-6 left-3 z-[1000] 
       sm:bottom-8 sm:left-20 
       md:bottom-10 md:left-27
-      scale-100 sm:scale-40 md:scale-100
+      scale-60 sm:scale-90 md:scale-100
     "
   >
     <AjioButton />
