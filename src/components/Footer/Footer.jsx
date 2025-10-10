@@ -58,7 +58,7 @@ const Footer = () => {
               <span className="text-yellow-400">Coupons Culture</span>
             </h2>
             <p className="text-xs text-gray-400 mt-1">
-              Get the latest trending coupans and updates in your inbox.
+              Get the latest trending coupons and updates in your inbox.
             </p>
           </div>
 
