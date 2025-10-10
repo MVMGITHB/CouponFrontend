@@ -14,8 +14,8 @@ const PopularBrand = {
     title: "Ajio",
     desc: "Gadgets<br/> You’ll Love,<br/> Prices <br/> You’ll Love More.",
     banner: "/popularbrand/Ajionewbanner09oct.png",
-    image1 :"/popularbrand/Fall.png" , 
-    image2 : "/popularbrand/Fall1.png"
+    image1 :"/popularbrand/Svara.png" , 
+    image2 : "/popularbrand/Levi.png"
   },
   levis: {
     title: "Levis's",

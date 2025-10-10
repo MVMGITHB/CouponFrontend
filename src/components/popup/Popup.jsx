@@ -39,13 +39,13 @@ export default function Popup() {
           className="relative"
         >
           <img
-            src="/KVAASSDIWALI.jpg"
+            src="/bg-pop.jpeg"
             alt="Popup"
             className=" hidden md:block h-auto max-h-[60vh] object-contain rounded-2xl "
           />
 
           <img
-            src="/KVAASSDIWALI.jpg"
+            src="/bg-pop.jpeg"
             alt="Popup"
             className="block md:hidden h-auto max-h-[60vh] object-contain rounded-2xl "
           />

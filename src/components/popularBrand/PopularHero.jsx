@@ -5,6 +5,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import Image from "next/image";
 import Link from 'next/link';
 import AjioButton from './AjioButton';
+import RunningBanner from './RunningBanner';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -60,8 +61,27 @@ const PopularHero = ({data,slug}) => {
   }, []);
 
   return (
-   <section className="bg-gray-100 pt-[80px] px-5  pb-[10px] overflow-hidden">
-         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
+   <section className="  pt-[20px] md:pt-[50px] px-5 pb-[10px] overflow-hidden relative ">
+
+
+      {/* 🔹 Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* 🔹 Optional dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/40 -z-5"></div>
+          
+          <RunningBanner/>
+
+         <div className="max-w-7xl  mx-auto flex flex-col lg:flex-row justify-between gap-8">
            <div className="w-full lg:w-[950]" ref={imageRef}>
              <div className="rounded-2xl overflow-hidden  ">
 
@@ -71,7 +91,7 @@ const PopularHero = ({data,slug}) => {
               <Image
                  src={data?.banner}
                  alt={data?.title || "Category Banner"}
-                 width={700}
+                 width={800}
                  height={500}
                  className="object-cover w-full h-auto"
                  priority
@@ -106,9 +126,9 @@ const PopularHero = ({data,slug}) => {
               <Image
                  src={data?.image1}
                  alt={data?.title || "Category Banner"}
-                 width={457}
+                 width={500}
                  height={210}
-                 className="object-cover  h-auto"
+                 className="object-cover  h-auto rounded-2xl"
                  priority
                />
                </Link>
@@ -121,15 +141,21 @@ const PopularHero = ({data,slug}) => {
               <Image
                  src={data?.image2}
                  alt={data?.title || "Category Banner"}
-                 width={457}
+                 width={500}
                  height={210}
-                 className="object-cover h-auto"
+                 className="object-cover h-auto rounded-2xl"
                  priority
                />
                </Link>
              </div>
            </div>
          </div>
+{/* 
+       <div className="absolute  top-0 right-2 w-[50px] md:w-[200px] h-[50px] md:h-[150px] bg-[url('/bg.gif')] bg-contain bg-center bg-no-repeat"></div>
+         
+
+         <div className="absolute  top-0 left-0 w-[50px] md:w-[130px] h-[50px] md:h-[150px] bg-[url('/bg.gif')] bg-contain bg-center bg-no-repeat"></div>
+       */}
        </section>
   )
 }
