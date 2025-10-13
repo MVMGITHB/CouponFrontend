@@ -97,8 +97,8 @@ export default function Deals() {
   };
 
   return (
-    <div className="py-12 ">
-      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
+    <div className=" ">
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 ">
         🎉 Deals on Fire
       </h2>
 
@@ -129,9 +129,9 @@ export default function Deals() {
           ))}
         </div>
       </div>
-      <div className="py-5">
+      <div className="mt-12">
         <img
-          src="/images/banner.webp"
+          src="/images/bannerbottom.png"
           alt="Offer-banner"
           className="w-screen object-cover"
         />
