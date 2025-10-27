@@ -41,9 +41,9 @@ export default function HeroFirst() {
       {slides.map((slide, index) => (
         <div key={index} className="flex justify-center items-center py-10 px-4">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full h-auto md:h-[350px] max-w-5xl border border-gray-200 flex flex-col items-center">
-            {/* Slide content */}
+           
             <div className="flex flex-col md:flex-row gap-6 w-full ">
-              {/* Left Section */}
+             
               <div className="flex flex-col gap-4 w-full md:w-2/3">
                 <div className="border border-black p-4 rounded-md text-center">
                   <h2 className="text-2xl font-bold">{slide.title}</h2>
@@ -56,7 +56,7 @@ export default function HeroFirst() {
                 </div>
               </div>
 
-              {/* Right Section */}
+              
               <div className=" w-full md:w-1/3 border border-black rounded-md bg-gray-50 flex flex-col items-center justify-center gap-4 p-4">
                 <img
                   src={slide.logo}
@@ -71,7 +71,7 @@ export default function HeroFirst() {
               </div>
             </div>
 
-            {/* Button Centered Below */}
+           
             <div className="mt-6">
               <button className="px-6 py-2 bg-black text-white rounded-xl hover:bg-gray-800 transition">
                 Shop Now
