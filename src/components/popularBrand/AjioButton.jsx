@@ -16,7 +16,7 @@ const AjioButton = () => {
     }
 
 
-    console.log("AJIO link clicked - Meta Pixel event fired");
+    // console.log("AJIO link clicked - Meta Pixel event fired");
     setIsActivated(true);
   };
 

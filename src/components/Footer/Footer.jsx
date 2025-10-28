@@ -155,7 +155,7 @@ const Footer = () => {
           <p>© 2025 Coupans Culture. All rights reserved.</p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-end">
             <Link
-              href="#"
+              href="https://www.facebook.com/couponsculture"
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
               <FaFacebook size={16} /> Facebook
