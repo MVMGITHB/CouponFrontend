@@ -173,7 +173,7 @@ const Footer = () => {
               <FaGithub size={16} /> GitHub
             </Link>
             <Link
-              href="https://www.instagram.com/couponsculture?igsh=aXJxazVnaWZzczhy"
+              href="https://www.instagram.com/couponsculture/"
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
               <FaInstagram size={16} /> Instagram
