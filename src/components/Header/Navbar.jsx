@@ -19,11 +19,11 @@ const navItems = [
   { label: "Fashion", href: "/fashion-coupon" },
   // { label: "Fashion", href: "#" },
 
-  { label: "Electronics", href: "electronic-coupon" },
+  { label: "Electronics", href: "/electronic-coupon" },
   // { label: "Electronics", href: "#" },
-  { label: "Food", href: "food-coupon" },
+  { label: "Food", href: "/food-coupon" },
   // { label: "Food", href: "#"  },
-  { label: "Travel", href: "travel-coupon" },
+  { label: "Travel", href: "/travel-coupon" },
   // { label: "Travel", href: "#" },
 ];
 

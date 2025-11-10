@@ -1,3 +1,4 @@
+import { Blog } from "../../components/blog/Blog";
 import FashionCoupon from "../../components/FashionCoupon/FashionCoupon";
 
 
@@ -43,7 +44,8 @@ export default function Page() {
     <>
      
       <FashionCoupon slug="electronic-coupon" images={images} heading={"Latest Gadgets at Smart Prices That Don’t Break the Bank "}/>
-  
+            <Blog url="technology" />
+      
     </>
   );
 }

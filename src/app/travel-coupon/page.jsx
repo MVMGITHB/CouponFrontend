@@ -1,3 +1,4 @@
+import { Blog } from "../../components/blog/Blog";
 import FashionCoupon from "../../components/FashionCoupon/FashionCoupon";
 
 export const metadata = {
@@ -44,6 +45,8 @@ export default function Page() {
   return (
     <>
       <FashionCoupon slug="travel-coupon" images={images} heading={"Travel Deals for All Your Adventures "}/>
+      <Blog url="automobile" />
+      
     </>
   );
 }

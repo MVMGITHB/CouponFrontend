@@ -1,5 +1,5 @@
 import FashionCoupon from "../../components/FashionCoupon/FashionCoupon";
-
+import { Blog } from "../../components/blog/Blog";
 export const metadata = {
   title: "Top Fashion Discounts 2025 | Clothes, Shoes & More",
   description:
@@ -44,6 +44,7 @@ export default function Page() {
   return (
     <>
       <FashionCoupon slug="fashion-coupon" images={images} heading={"Look Good, Spend Less - Fashion Deals You’ll Love"}/>
+      <Blog url="fashion-coupon" />
     </>
   );
 }
