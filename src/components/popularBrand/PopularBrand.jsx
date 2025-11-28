@@ -33,8 +33,9 @@ const PopularBrand = () => {
   }, []);
 
   const brands = [
+     { name: "AJIO", img: "/brand/AL.png" ,  url:"/ajio" },
     { name: "Flipkart", img: "/brand/flipkart-logo-png-transparent.png" , url:"/flipkart" },
-    { name: "AJIO", img: "/brand/AL.png" ,  url:"/ajio" },
+   
     { name: "Levis", img: "/brand/levis.png" , url:"/levis" },
     { name: "Myntra", img: "/brand/ml.png" , url:"/myntra"  },
     { name: "Marks & Spencer", img: "/brand/Marks_&_Spencer_new_logo.svg.png" , url:"/markspencer" },
