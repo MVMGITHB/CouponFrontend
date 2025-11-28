@@ -8,7 +8,7 @@ export default function Popup() {
   const [showClose, setShowClose] = useState(false);
 
   useEffect(() => {
-    const showTimer = setTimeout(() => setVisible(true), 8000);
+    const showTimer = setTimeout(() => setVisible(true), 2000);
     const closeTimer = setTimeout(() => setShowClose(true), 1000);
     return () => {
       clearTimeout(showTimer);
@@ -27,25 +27,25 @@ export default function Popup() {
          {showClose && (
           <button
             onClick={() => setVisible(false)}
-            className="absolute cursor-pointer top-3 right-[250px] z-20 bg-white/80 hover:bg-white rounded-full p-1 transition"
+            className="absolute cursor-pointer top-3  right-1 md:right-[200px] z-20 bg-white/80 hover:bg-white rounded-full p-1 transition"
           >
             <X size={20} className="text-black" />
           </button>
         )}
         
         <Link
-          href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=cc%20&redirect=https://www.ajio.com/s/50to90percentoff-140961"
+          href="https://offer.mvmtracking.com/api/clicks?campaign_id=491&pub_id=15&originalClick={}"
           target="_blank"
           className="relative"
         >
           <img
-            src="/bg-pop.jpeg"
+            src="/popularbrand/Desktop-Pop-ups.gif"
             alt="Popup"
             className=" hidden md:block h-auto max-h-[60vh] object-contain rounded-2xl "
           />
 
           <img
-            src="/bg-pop.jpeg"
+            src="/popularbrand/Mobile-Pop-Up-gif.gif"
             alt="Popup"
             className="block md:hidden h-auto max-h-[60vh] object-contain rounded-2xl "
           />

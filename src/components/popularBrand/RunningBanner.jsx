@@ -1,10 +1,10 @@
 export default function RunningBanner() {
   return (
     <div className="relative overflow-hidden  py-2">
-      <div className="marquee whitespace-nowrap text-yellow-400 text-xl font-bold">
-        <span className="mx-8">🔥Flat 75% Off — On Diwali Sale! 🔥</span>
+      <div className="marquee whitespace-nowrap text-blue-1000 text-xl font-bold">
+        <span className="mx-8">🔥Upto 90% Off — On Black Friday! 🔥</span>
         <span className="mx-8">🔥Hurry Up— Limited Time Offer 🔥</span>
-        <span className="mx-8">🔥Save Big Before the Festival Ends! 🔥</span>
+        <span className="mx-8">🔥Save Big Before the Black Friday Ends! 🔥</span>
       </div>
 
       {/* Custom animation styles */}
