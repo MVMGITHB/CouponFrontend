@@ -21,7 +21,7 @@ export default function Popup() {
   return (
 
    
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-2">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-1">
       <div className="relative min-w-[65%] flex justify-center  rounded-2xl overflow-hidden">
 
          {showClose && (
@@ -45,9 +45,9 @@ export default function Popup() {
           />
 
           <img
-            src="/popularbrand/Mobile-Pop-Up-gif.gif"
+            src="/popularbrand/700-mob-gif.gif"
             alt="Popup"
-            className="block md:hidden h-auto max-h-[60vh] object-contain rounded-2xl "
+            className="block md:hidden h-auto max-h-[80vh] object-contain rounded-2xl "
           />
 
          
