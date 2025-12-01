@@ -23,7 +23,7 @@ function page() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        email: "contact@mobiperform.com",
+        email: "contact@shopsmaart.com",
         contactType: "customer service",
         areaServed: "Worldwide",
         availableLanguage: ["English"],
