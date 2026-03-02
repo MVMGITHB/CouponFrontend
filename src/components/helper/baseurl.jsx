@@ -1,6 +1,6 @@
-export const base_url = "http://localhost:5005";
+// export const base_url = "http://localhost:5005";
 // const base_url = "https://coupanbackend-5iao.onrender.com";
-// const base_url = "https://api.couponsculture.com";
+const base_url = "https://api.couponsculture.com";
 export const base_url1 = "https://user.couponsculture.com";
 export const BASE_URL = "https://api.shopsmaart.com"
 export const BASE_URL2 = "https://connect.couponsculture.com"
