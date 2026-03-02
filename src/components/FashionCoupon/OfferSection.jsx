@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import Modal1 from "../CouponModal/Modal1";
 import axios from "axios";
 import base_url from "../helper/baseurl";
+import Link from "next/link";
+import Image from "next/image";
+
 export const OfferSection = ({ slug }) => {
   const [offers, setOffers] = useState([]);
 
@@ -102,15 +105,17 @@ export const OfferSection = ({ slug }) => {
         onClose={handleCloseModal}
         offer={selectedOffer}
       />
-      <div>
-        <img
-          src="/rupay-mobile.jpeg"
-          alt="Fashion"
-          className="w-full h-[400px] object-contain rounded"
-        />
-      </div>
 
       <div className="grid  w-full md:w-48 gap-4 py-4 mx-auto ">
+        <Link href="https://www.rupay.co.in/rupay-cashbackcampaign?utm_source=perfpartner&utm_medium=cpbankclicks&utm_campaign=rupay-linkage&utm_id=adam-creditcard-rupay2025-INR250cashback-Vedang-INR250cashback-english-static-IA-{13}" target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/rupay-mobile.jpeg"
+            alt="RuPay Offer"
+            width={800}
+            height={600}
+            className="w-full h-[400px] object-contain rounded cursor-pointer"
+          />
+        </Link>
         {offers?.map((item, index) => {
           return (
             <>
