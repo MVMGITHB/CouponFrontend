@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
 import Script from "next/script";
+import ChunkErrorHandler from "@/components/ChunkErrorHandler";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,6 +19,10 @@ export const metadata = {
   title: "Coupons Culture",
 };
 export default function RootLayout({ children }) {
+
+
+  
+  
   return (
     <html lang="en">
       <head>
@@ -53,6 +58,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+        
+
+<ChunkErrorHandler />
+       
         <AuthProvider>
           <Header />
 
