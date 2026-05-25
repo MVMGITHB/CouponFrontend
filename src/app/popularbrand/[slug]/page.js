@@ -2,6 +2,9 @@ import PopularMain from "@/components/popularBrand/PopularMain";
 import Script from "next/script";
 import React from "react";
 import Popup from "../../../components/popup/Popup";
+import { BASE_URL } from "../../../components/helper/baseurl";
+
+
 
 const PopularBrand = {
   flipkart: {
@@ -11,6 +14,7 @@ const PopularBrand = {
     image1: "/popularbrand/Frame84.png",
     image2: "/popularbrand/Frame86.png",
   },
+
   ajio: {
     title: "Ajio",
     desc: "Gadgets<br/> You’ll Love,<br/> Prices <br/> You’ll Love More.",
@@ -18,6 +22,7 @@ const PopularBrand = {
     image1: "/popularbrand/USpolioassnkids.png",
     image2: "/popularbrand/ajioredtapebanner.png",
   },
+
   levis: {
     title: "Levis's",
     desc: "Delicious <br/> Deals <br/> in Every Bite",
@@ -25,13 +30,15 @@ const PopularBrand = {
     image1: "/popularbrand/levis2.png",
     image2: "/popularbrand/levis3.png",
   },
+
   myntra: {
     title: "Myntra",
-    desc: "Discover <br/> Top Beauty <br/> Brands <br/> and  Products.",
+    desc: "Discover <br/> Top Beauty <br/> Brands <br/> and Products.",
     banner: "/popularbrand/myntra1.png",
     image1: "/popularbrand/myntra2.png",
     image2: "/popularbrand/myntra3.png",
   },
+
   markspencer: {
     title: "Mark Spencer",
     desc: "Save <br/> on your <br/> next travel <br/> booking.",
@@ -43,12 +50,35 @@ const PopularBrand = {
 
 const page = async ({ params }) => {
   const { slug } = await params;
+
   const data = PopularBrand[slug];
+
+  // FETCH API DATA
+  let couponData = [];
+
+  try {
+    const response = await fetch(
+      `${BASE_URL}/api/coupon/getCouponByBrandSlug/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    const result = await response.json();
+
+    console.log("Coupon Response:", result);
+
+    couponData = result?.coupons || [];
+  } catch (error) {
+    console.log("Fetch Error:", error);
+  }
 
   if (!data) {
     return (
       <div className="text-center py-20">
-        <h1 className="text-2xl font-semibold">Brand not found</h1>
+        <h1 className="text-2xl font-semibold">
+          Brand not found
+        </h1>
       </div>
     );
   }
@@ -66,8 +96,10 @@ const page = async ({ params }) => {
               if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
               n.queue=[];t=b.createElement(e);t.async=!0;
               t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              s.parentNode.insertBefore(t,s)}
+              (window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
+
               fbq('init', '797084170021217');
               fbq('track', 'PageView');
             `}
@@ -84,7 +116,13 @@ const page = async ({ params }) => {
         </>
       )}
 
-      <PopularMain data={data} slug={slug} />
+      {/* PASS API DATA */}
+      <PopularMain
+        data={data}
+        slug={slug}
+        couponData={couponData}
+      />
+
       <Popup />
     </div>
   );

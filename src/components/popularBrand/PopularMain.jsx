@@ -7,34 +7,34 @@ import CategoryOffer from "../category/CategoryOffer"
 import { BASE_URL } from "../helper/baseurl"
 import axios from 'axios'
 
-const PopularMain = ({ data, slug }) => {
+const PopularMain = ({ data, slug , couponData }) => {
 
-  console.log("Slug Is ", slug)
-  const [couponData, setCouponData] = useState([])
+  // console.log("Slug Is ", slug)
+  // const [couponData, setCouponData] = useState([])
 
-  const fetchData = async () => {
+  // const fetchData = async () => {
 
-    try {
+  //   try {
 
-      const res = await axios.get(
-        `${BASE_URL}/api/coupon/getCouponByBrandSlug/${slug}`
-      );
+  //     const res = await axios.get(
+  //       `${BASE_URL}/api/coupon/getCouponByBrandSlug/${slug}`
+  //     );
 
-      console.log("Use Effecy l")
-      console.log("Responseis ", res.data)
-      setCouponData(res.data.coupons)
+  //     console.log("Use Effecy l")
+  //     console.log("Responseis ", res.data)
+  //     setCouponData(res.data.coupons)
 
 
-    } catch (error) {
-      console.log("error", error)
+  //   } catch (error) {
+  //     console.log("error", error)
 
-    }
+  //   }
 
-  }
+  // }
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
 
 
 
