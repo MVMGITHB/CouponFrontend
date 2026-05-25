@@ -71,14 +71,14 @@ const PopularHero = ({ data, slug }) => {
       {/* 🔹 Optional dark overlay for contrast */}
       {/* <div className="absolute inset-0 bg-black/40 -z-5"></div> */}
 
-      <RunningBanner />
+      {/* <RunningBanner /> */}
 
       <div className="max-w-7xl  mx-auto flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-[950]" ref={imageRef}>
           <div className="rounded-2xl overflow-hidden  ">
 
               <Link
-              href="https://offer.mvmtracking.com/api/clicks?campaign_id=491&pub_id=15&originalClick={}"
+              href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=ic&redirect=https://www.ajio.com/s/50to90percentoff-193592"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -113,7 +113,7 @@ const PopularHero = ({ data, slug }) => {
         <div className="abril-fatface-regular  lg:w-1/2 flex flex-col items-start justify-center gap-2 ">
           <div className=" overflow-hidden  " ref={image1Ref}>
             <Link
-              href="https://offer.mvmtracking.com/api/clicks?campaign_id=487&pub_id=15&originalClick={}"
+              href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=ic&redirect=https://www.ajio.com/s/min60percentoff-218796?ref=cmsBanner&_gl=1*1pgke3b*_gcl_aw*R0NMLjE3Nzk3MTM1MjMuQ2p3S0NBanc1c19RQmhBZEVpd0FERF9nQm42WWlLMFJQczI5ZktCNE1OM0RLZWJzLXp5bl8xVlNpTDNJT0ZFY3dkRFVTNzRMejR3YjlSb0NrZFFRQXZEX0J3RQ..*_gcl_au*NzQzNTE4NjgzLjE3NzgyMjA4NTY.*_ga*MTgzODE5NTkyMC4xNzYxNTQ3OTMx*_ga_X3MNHK0RVR*czE3Nzk3MTc4Mzckbzk5JGcxJHQxNzc5NzE4NTY4JGo0NyRsMCRoMA"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -129,7 +129,7 @@ const PopularHero = ({ data, slug }) => {
           </div>
           <div className=" overflow-hidden " ref={image2Ref}>
             <Link
-              href="https://offer.mvmtracking.com/api/clicks?campaign_id=489&pub_id=15&originalClick={}"
+              href="https://tracking.ajio.business/click?pid=87&offer_id=2&sub1=ic&redirect=https://www.ajio.com/s/andmin50-218163?ref=cmsBanner&_gl=1*h3f5xx*_gcl_aw*R0NMLjE3Nzk3MTM1MjMuQ2p3S0NBanc1c19RQmhBZEVpd0FERF9nQm42WWlLMFJQczI5ZktCNE1OM0RLZWJzLXp5bl8xVlNpTDNJT0ZFY3dkRFVTNzRMejR3YjlSb0NrZFFRQXZEX0J3RQ..*_gcl_au*NzQzNTE4NjgzLjE3NzgyMjA4NTY.*_ga*MTgzODE5NTkyMC4xNzYxNTQ3OTMx*_ga_X3MNHK0RVR*czE3Nzk3MTc4Mzckbzk5JGcxJHQxNzc5NzE4ODUxJGoxMCRsMCRoMA"
               target="_blank"
               rel="noopener noreferrer"
             >
