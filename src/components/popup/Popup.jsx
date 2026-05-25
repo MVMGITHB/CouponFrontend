@@ -34,18 +34,18 @@ export default function Popup() {
         )}
         
         <Link
-          href="https://offer.mvmtracking.com/api/clicks?campaign_id=491&pub_id=15&originalClick={}"
+          href="https://offer.mvmtracking.com/api/clicks?campaign_id=624&pub_id=32&originalClick={}&sub1={your_sub}"
           target="_blank"
           className="relative"
         >
           <img
-            src="/popularbrand/Desktop-Pop-ups.gif"
+            src="/popularbrand/clubitcpopup.png"
             alt="Popup"
             className=" hidden md:block h-auto max-h-[60vh] object-contain rounded-2xl "
           />
 
           <img
-            src="/popularbrand/700-mob-gif.gif"
+            src="/popularbrand/clubitcmobile.png"
             alt="Popup"
             className="block md:hidden h-auto max-h-[80vh] object-contain rounded-2xl "
           />
